@@ -1,0 +1,7 @@
+site_name: CIS Controls Self Assessment Tool Document Library
+
+nav:
+    - Home: index.md
+
+theme:
+    name: readthedocs
