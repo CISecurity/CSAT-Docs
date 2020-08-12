@@ -3,7 +3,7 @@ site_name: CIS Controls Self Assessment Tool Document Library
 nav:
     - Home: index.md
     - Source:
-        - CSAT Pro Deployment Guide for Linux: source/CSAT Pro Deployment Linux.md
+        - CSAT Pro Deployment Guide: source/CSAT Pro Deployment.md
 
 theme:
     name: readthedocs
