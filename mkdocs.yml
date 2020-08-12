@@ -7,3 +7,4 @@ nav:
 
 theme:
     name: readthedocs
+    collapse_navigation: false
