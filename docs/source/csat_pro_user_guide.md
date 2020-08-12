@@ -201,3 +201,5 @@ At the top right of the Assessment Dashboard, users can Close/Reopen an assessme
 ####Assessment Summary Page####
 At the top left of the Assessment Dashboard, users can switch to the “Assessment Summary” tab which takes users to a listing of the assessment’s Sub-Controls showing task status information including its number, title, and whether it is applicable, assigned, completed, and/or validated.  Hovering over a green check mark on this page will provide the user who performed the action.  Hovering over the check marks in the Assigned column will also provide the due date for the task.  Users can switch back to the Assessment Dashboard by clicking the “Dashboard” tab in the upper left of the Assessment Summary page.
 
+####Control View####
+The Control View can be reached by clicking on a Control block in the Control Block Heat Map on the Assessment Dashboard.  
