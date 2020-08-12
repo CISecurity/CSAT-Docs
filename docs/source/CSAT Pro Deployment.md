@@ -1,7 +1,7 @@
-![](img/csat.png)
+![](img/CIS_CSAT_Pro_RGB.png)
 
 
-# CIS CSAT Pro Deployment Guide for Linux#
+# CIS CSAT Pro Deployment Guide#
 ----------
 ##Introduction ##
 CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows 64 bit** operating systems, as well as most **Linux** operating systems, whether GUI based, or server based. The  installer for CIS CSAT Pro is an all-in-one package, so it will set up the application, database, and services for you. We use an embedded version of <b>Tomcat 9</b> that comes packaged with Grails, and we also supply <b>Java 11</b> that is used for the <b>Neo4j 3.5 database</b>, as well as CIS CSAT Pro.
@@ -80,7 +80,7 @@ The third option is our least recommended option in terms of security. This will
 ####Installation####
 In this section, the installer will be extracting all necessary files into the installation directory chosen. This process may take a few minutes.
 
-####Set Up Database Admin##
+####Set Up Database Admin####
 
 ####Installing and Starting CIS CSAT Pro####
 
