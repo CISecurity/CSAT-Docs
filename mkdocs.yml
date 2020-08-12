@@ -2,9 +2,8 @@ site_name: CIS Controls Self Assessment Tool Document Library
 
 nav:
     - Home: index.md
-    - Source:
-        - CSAT Pro Deployment Guide: source/CSAT Pro Deployment.md
-        - CSAT Pro User Guide: source/csat_pro_user_guide.md
+    - CSAT Pro Deployment Guide: source/CSAT Pro Deployment.md
+    - CSAT Pro User Guide: source/csat_pro_user_guide.md
 
 theme:
     name: readthedocs
