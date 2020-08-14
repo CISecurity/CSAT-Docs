@@ -7,14 +7,14 @@ Introduction
 ------------
 The CIS Controls Self Assessment Tool (CSAT) is a web application that helps organizations track their implementation of the CIS Controls down to the Sub-Control level.  CSAT provides a workflow to facilitate collaboration among team members as they self-assess the organization’s CIS Controls implementation.
 
-A free, CIS-Hosted version of CSAT was released in early 2019 and is available at https://csat.cisecurity.org/
+A free, CIS-Hosted version of CSAT was released in early 2019 and is available at [CIS CSAT](https://csat.cisecurity.org/).
 
 SecureSuite Members also have access to an on-premises version, CSAT Pro, which this User Guide describes.  CSAT Pro gives organizations greater control by allowing them to setup and host instances of CSAT in their own environment.
 
 
 License
 ------------
-Access to CSAT Pro requires a SecureSuite Membership.  Additional information on SecureSuite Membership can be found at https://www.cisecurity.org/cis-securesuite/
+Access to CSAT Pro requires a SecureSuite Membership.  Additional information on SecureSuite Membership can be found at [CIS SecureSuite](https://www.cisecurity.org/cis-securesuite/).
 
 Your organization’s license file and configuration files can be obtained through CIS WorkBench [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, your organization’s Company Manager in WorkBench can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” on the right.  This will take the Company Manager to a page that shows the company’s Active License Keys.  The Company Manager should then download the license bundle.  If this page says “There are no active license keys for this organization”, then the Company Manager will need to contact [CIS Support](https://www.cisecurity.org/support/). 
 
