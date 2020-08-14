@@ -16,10 +16,20 @@ License
 ------------
 Access to CSAT Pro requires a SecureSuite Membership.  Additional information on SecureSuite Membership can be found at https://www.cisecurity.org/cis-securesuite/
 
+Your organization’s license file and configuration files can be obtained through CIS WorkBench [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, your organization’s Company Manager in WorkBench can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” on the right.  This will take the Company Manager to a page that shows the company’s Active License Keys.  The Company Manager should then download the license bundle.  If this page says “There are no active license keys for this organization”, then the Company Manager will need to contact [CIS Support](https://www.cisecurity.org/support/). 
+
+Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license-key.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the [CIS CSAT Pro Deployment Guide](https://csat.readthedocs.io/en/latest/source/CSAT%20Pro%20Deployment/).
+
+The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available to your Company Manager in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation.  The path to your license file is also visible in CSAT Pro to System Admins when they navigate to the License Information page.
+
+Privacy Policy
+------------
+Please read the CIS CSAT Pro Privacy Policy prior to using CSAT Pro; it is available at https://workbench.cisecurity.org/files/2891 
+
 
 Getting Started
 ------------
-Information on setting up a CSAT Pro instance can be found in the Deployment Guide.
+Information on setting up a CSAT Pro instance can be found in the [CIS CSAT Pro Deployment Guide](https://csat.readthedocs.io/en/latest/source/CSAT%20Pro%20Deployment/).  A default System Admin user is created during the installation process.  The default username is “admin” and the default password is “@admin123”.  You can use this default user to log in to CSAT Pro for the first time and to create other users.  It is strongly recommended that you change the password for this default user immediately, as this user has full access to the tool and the password is publicly available.
 
 
 The Basics
@@ -38,9 +48,9 @@ Each user is assigned a system profile, which determines the user’s access lev
 #### Organization Roles ####
 Once organizations are created in the tool, users can be assigned roles in those organizations.  The role is an affiliation between the user and the organization that determines what actions the user can perform on the organization, the organization’s assessments, and the organization’s users.  There are three Organization Roles available: 
 
-- Admin: An Organization Admin has full access to the organization, the assessments in that organization, and control over the organizational roles for users affiliated with that organization.  An Organization Admin can create Sub-Organizations under that organization as well, and can create new assessments for the organization as well.
-- Full User: A Full User has full access to work on existing assessments in the organization.  A Full User cannot create new assessments, cannot create Sub-Organizations, and cannot edit user Organization Roles for the organization.
-- Basic User: A Basic User has limited access to the organization’s assessments and can only view/complete tasks that have been directly assigned to that user.  A Basic User cannot create new assessments, cannot create Sub-Organizations, and cannot edit user Organization Roles for the organization.
+-	Admin: An Organization Admin has full access to the organization, the assessments in that organization, and control over the organizational roles for users affiliated with that organization.  An Organization Admin can create Sub-Organizations under that organization as well, and can create new assessments for the organization as well.
+-	Full User: A Full User has full access to work on existing assessments in the organization.  A Full User cannot create new assessments, cannot create Sub-Organizations, and cannot edit user Organization Roles for the organization.
+-	Basic User: A Basic User has limited access to the organization’s assessments and can only view/complete tasks that have been directly assigned to that user.  A Basic User cannot create new assessments, cannot create Sub-Organizations, and cannot edit user Organization Roles for the organization.
 
 A user can be assigned a different organizational role for each organization and sub-organization in CSAT Pro, though a user does not need to have a role assigned for each organization.  For example, User A might be an Organization Admin in Organizations Z and Y, might be a Full User in Organization Q, and might have no role at all in Organizations E and F.  User B might only administer the CSAT Pro instance and not need to work on any assessments, so User B might not have any Organization Roles assigned.
 
@@ -59,6 +69,11 @@ Pages and Actions
 ------------
 This section contains a description of the pages within CSAT Pro and which actions can be performed on those pages.
 
+
+### Login Page ###
+The login page displays the tool title and version.  Users can enter their username and password here to login.  Usernames are case sensitive.  Users will receive a “Login failed. Username/Password was incorrect” message if the username was not recognized, or if the password provided was not the correct password for that username.  If an account is disabled, login attempts for that username will receive an “Account disabled. Please contact your Administrator” message.
+
+The Login page also has a “Forgot Password?” link below the username/password fields.  This will display a pop-up where users can enter their username and click “Send”.  Doing so will send an email to the email address on file for that username.  The email will contain a link that will allow the user to reset the password for that account.
 
 
 ### Home Page ###
@@ -88,7 +103,7 @@ System Admin users will have a gear icon to represent the System Admin menu whic
 Clicking on the user’s username shows a menu that can take the user to the My Profile page.
 
 ####Logout####
-Logout will log the user out of CSAT Pro.
+Logout will log the user out of CSAT Pro and return the user to the CSAT Pro login page.
 
 ####License Status####
 The License Status symbol shows the status of the tool’s license.  System Admins can click this to go to the License Information page.
@@ -120,24 +135,24 @@ Similarly, users with an Organization Admin organization role can click the “C
 
 Each organization/sub-organization is created with the following attributes:
 
-- Name – the name of the organization must be unique within the CSAT Pro instance.
-- Website – the organization’s website does not need to be unique
-- Industry – the industry is selected from a drop down menu of choices.  If the CSAT Pro instance is opted-in to the Industry Average Service, the industry selection will determine the industry data that is displayed for that organization’s assessments.
+-	Name – the name of the organization must be unique within the CSAT Pro instance.
+-	Website – the organization’s website does not need to be unique
+-	Industry – the industry is selected from a drop down menu of choices.  If the CSAT Pro instance is opted in to the Industry Average Service, the industry selection will determine the industry data that is displayed for that organization’s assessments.
 
 The user creating the organization is assigned the Organization Admin role for that organization by default.   That Organization Admin can then add an Organization Role for other users with the “Add Users” button from the Active Users section of that organization’s Organization Info page.
 
 
-### Creating a New Assessment ###
+### Creating an Assessment ###
 Organization Admins can create new assessments from the Organization Info page for that organization.  The “Start New Assessment” button goes to a Create Assessment page that lets the user enter the information needed to create the assessment.
 
 Each assessment is created with the following attributes:
 
-- Name – The name for the assessment does not need to be unique
-- Due Date – The due date is the desired date to complete the assessment
-- Assessment Template – the Control Framework and Scoring Method that the assessment will use.  CSAT Pro currently has the CIS Controls v7.1 with Simple Scoring available.
-- Implementation Group – when an Assessment Template to which Implementation Groups apply is selected, an Implementation Group will need to be selected as well.  Implementation Groups apply to CIS Controls templates.
+-	Name – The name for the assessment does not need to be unique
+-	Due Date – The due date is the desired date to complete the assessment
+-	Assessment Template – the Control Framework and Scoring Method that the assessment will use.  CSAT Pro currently has the CIS Controls v7.1 with Simple Scoring available.
+-	Implementation Group – when an Assessment Template to which Implementation Groups apply is selected, an Implementation Group will need to be selected as well.  Implementation Groups apply to CIS Controls templates.
 
-Similarly, the “Import Assessment” button goes to an Import Assessment page that lets the user enter this same information.  The Import Assessment page requires one additional field; the user must use the “Choose File” button to browse to a spreadsheet file.  The selected spreadsheet file must be of the format of those exported from the CIS-Hosted version of CSAT.  A detailed log indicating import successes and warnings will be generated and displayed following the import process.
+Similarly, the “Import Assessment” button goes to an Import Assessment page that lets the user enter this same information.  The Import Assessment page requires one additional field; the user must use the “Choose File” button to browse to a spreadsheet file.  The selected spreadsheet file must be of the format of those exported from the CIS-Hosted version of CSAT (this spreadsheet can be exported from the CIS-Hosted version of CSAT using the “Control Summary Report” option in the “Reports” section of the menu on the left side of the page).  A detailed log indicating import successes and warnings will be generated and displayed following the import process.
 
 ### System Admin Pages ###
 System Admins have several pages available to them that users with a Basic system profile do not.
@@ -193,7 +208,7 @@ Summary information about the assessment is provided at the top of the Assessmen
 Below that information are several graphs: 
 
 -	CIS Controls Implementation Average graph - This is a bar graph that shows current average for each Control (color coded to the same score ranges as indicated by the legend).  If the organization is opted in to the Industry Average Service, each Control will also have a bar indicating the industry average for that Control.  Hovering over a bar will show the Control number, the specific average, and whether that represents this assessment (org average) or the industry average.  Also, if opted in, the number of organizations used for the industry average is provided at the bottom of this graph.
--	Monthly Assessment Average graph – This line graph shows a monthly snapshot of the overall assessment score so that users can see how the assessment score has changed over time.  If opted in to the industry average service, there will also be a separate line representing the industry average.  The snapshot for the previous month is generally taken on the first day of the following month if the CSAT Pro instance is up and running (for instance, the August data would typically appear on the 1st day of September).
+-	Monthly Assessment Average graph – This line graph shows a monthly snapshot of the overall assessment score so that users can see how the assessment score has changed over time.  If opted in to the Industry Average Service, there will also be a separate line representing the industry average.  The snapshot for the previous month is generally taken on the first day of the following month if the CSAT Pro instance is up and running (for instance, the August data would typically appear on the 1st day of September).
 -	Implementation Group Averages graph – This graph has a bar for each of the three CIS Controls Implementation Groups (IG1, IG2, and IG3).  The scores for these bars use an exclusive definition for each IG when determining the score – thus, the IG3 bar does not factor in Sub-Controls that are in IG1 or IG2.  Unlike the other graphs, this graph does not take the assessment’s Sub-Control applicability into account; the IG3 bar represents the assessment’s average of the 31 IG3 Sub-Controls, regardless of whether this assessment has some or all of those Sub-Controls marked as Not Applicable.
 
 At the top right of the Assessment Dashboard, users can Close/Reopen an assessment.  Users can also export assessment information there; currently, the “Export CSV” button allows users to export a Sub-Control level spreadsheet.  At the top left of the Assessment Dashboard, users can select the Assessment Summary tab to switch to the Assessment Summary page.
@@ -203,4 +218,67 @@ At the top left of the Assessment Dashboard, users can switch to the “Assessme
 
 ####Control View####
 The Control View can be reached by clicking on a Control block in the Control Block Heat Map on the Assessment Dashboard.  This view provides the Control title and description.  It has the overall Assessment Average, but it also has Control level summary statistics including the Control Average, the Industry Control Average (if subscribed), the percentage completed for the Control, and the percentage validated for the Control.  Below that, it has all of the Sub-Controls for that Control.  Each of these can be expanded by clicking on the Sub-Control title, which will show the Sub-Control View for that Sub-Control.
+
+####Sub-Control View####
+The Sub-Control View provides the title of the Sub-Control which can be used to collapse or expand that Sub-Control.  To the right of the title is the Implementation Group for that Sub-Control (IG-1, IG-2, or IG-3) and an applicability toggle to indicate whether the Sub-Control is applicable or not for the assessment.
+
+Below the Sub-Control title bar is the Sub-Control title and description.  There is a drop down to score the Sub-Control; new scores are automatically saved when selected in this drop down.  Additional information can be found to the right including the Sub-Control’s current score converted to a 0 – 100 scale, the asset type, and the security function for the Sub-Control.  As workflow actions are performed such as assigning the task, completing the task, and validating the task, additional information will be populated there including the Assigned To and Assigned By users, the Assigned Date and Due Date, and the Completed By and Validated By users.
+
+Below that are workflow buttons.  The buttons available vary as different actions are performed.  These buttons include:
+
+-	Assign User – This button brings up the Assign User pop-up that allows a user to be selected, a due date to be provided, and an optional comment to be included.  This Sub-Control will be assigned to that user with the provided due date.  This task will then appear in a user’s “My Assigned Tasks” for that assessment.  An email will also be sent to the assigned user with the Sub-Control information, the due date, and the comment if one was provided.  No emails will be sent when users assign Sub-Controls to themselves. 
+-	Re-Assign User – This is essentially the same as the Assign User button, but it appears after a task has been assigned.  This button lets the assigned user and/or due date for the task be changed.
+-	Complete – A task can only be completed after it has been scored.  The Complete button removes the task from the Assigned Task list for the assigned user and makes the task ready for validation; a completed task will appear in the Assigned By user’s “My Pending for Validation Tasks” list.  The task can be reviewed and either sent back or validated.  If an unassigned task is completed, the task is assigned to the completing user.  Once completed, the Assign/Re-Assign buttons disappear for the task.
+-	Send Back – Once a task is completed, the Send Back button becomes available.  If a task is sent back, it will return to the Assigned Tasks list for the Assigned To user and be removed from the Pending for Validation Tasks list for the Assigned By user.
+-	Validate – Once a task is completed, the Validate button becomes available.  If a task is validated, it will lock the scoring drop down and the ability to upload evidence files.  This also removes the task from the Pending for Validation Tasks list for the Assigned By User.
+-	Revert Validation – Once a task is validated, the Revert Validation button becomes available.  This button will unlock the scoring drop down and the ability to upload evidence files.  It will also add the task back to the Pending for Validation Tasks list for the Assigned By User.
+
+In addition to the task’s current stage in the workflow, button availability also varies with the current user’s role in the organization.  Organization Admins and Full Users for that organization can perform all of the workflow actions listed above, even for tasks to which they are not directly assigned.  
+
+Basic Users in the organization are more limited.  Basic Users will only have access to the specific tasks that they have been assigned.  For a task assigned to a Basic User, that Basic User will be able to score that task, complete that task, upload/download/delete evidence files for that task, and toggle the task’s applicability.  A Basic User cannot send back, validate, or revert validation for a task.
+
+A task that is Not Applicable cannot be scored and its workflow buttons will not be available.  Task applicability can be initially set by the Implementation Group selected for the assessment.  The applicability for individual tasks can be adjusted with the Applicability toggle for that task by users with the appropriate role.
+
+Evidence files can be uploaded to the task with the Upload Evidence button, which is next to the workflow buttons.  This button will display an Upload Evidence pop-up that will allow the user to browse to an evidence file that they wish to upload to that task.  The Maximum file size for uploads is currently 5MB.  Uploaded evidence files are compressed into a zip format.  If evidence files have been uploaded to the task, there will be an Evidence section below the workflow buttons.  This section will display a list of the evidence files that have been uploaded to the task so far.  Clicking on the filename for the evidence file will download that evidence file.  Clicking on the trash can icon next to an evidence file name will delete the evidence file.
+
+Below the workflow buttons and Evidence section (if present) is the History section.  The History section serves as a log for that task’s events.  It provides details on the action that occurred, which user performed the action, and when that action took place.
+
+####Assigned Tasks List####
+A user’s Assigned Tasks list for an assessment is the list of tasks that have been assigned to that user that have not yet been completed.  A user will have a distinct Assigned Tasks list for each assessment that the user has access to.  The Assigned Tasks list can be reached from the Action column of an assessment’s row on both the My Assessments section on the Home page and the Assessments section of an Organization Info page.  The icon shows a person with a gear; hovering over the icon will indicate the number of tasks currently assigned to the user in that assessment.  If the user does not have any assigned tasks for an assessment, the icon will not appear.  Clicking the icon will take the user to the “My Assigned Tasks” page for that assessment, where users can view a list of their assigned tasks for the assessment along with which user assigned the task and when it is due.  Clicking on a task from the list will take the user to the Sub-Control view for that task where the user can complete the task.  Once the user completes the task, it will be removed from the Assigned Tasks list and will appear in the Pending for Validation list for the user who assigned the task.
+
+####Pending for Validation Tasks List####
+A user’s Pending for Validation Tasks list for an assessment is the list of tasks for which the user is the assignor, that have been completed, but have not yet been validated.  A user will have a distinct Pending for Validation Tasks list for each assessment that the user has access to.  The Pending for Validation Tasks list can be reached from the Action column of an assessment’s row on both the My Assessments section on the Home page and the Assessments section of an Organization Info page.  The icon shows a person with a checkmark; hovering over the icon will indicate the number of tasks that are currently pending for validation for that user in that assessment.  If the user does not have any pending for validation tasks for an assessment, the icon will not appear.  Clicking the icon will take the user to the “My Pending for Validation Tasks” page for that assessment, where users can view a list of their pending for validation tasks along with which user the task was assigned to and which user completed the task.  Clicking on a task from the list will take the user to the Sub-Control view for that task where the user can either send the task back or validate the task.  If the user sends the task back, it will be added to the Assigned Tasks list for the user the task is assigned to.  The task will be removed from the user’s Pending for Validation Tasks list once the task is either sent back or validated. 
+
+Scoring
+------------
+CIS CSAT Pro currently uses a Simple Scoring Method for CIS Controls 7.1 assessments.  This means that each CIS Sub-Control can be assigned a whole number score of 1 through 5.  Reference ranges are provided with each option; for instance, if an organization has a Sub-Control implemented on 50% of their systems, they could select a score of 3 which has a reference range of “41 – 60%”.  These reference ranges are only intended as a convenience and are not intended to be a hard and fast scoring requirement.  If an organization has its own way of scoring on a 1 – 5 scale that differs from the reference ranges, they are free to ignore the reference ranges and select the 1 – 5 scores that fit their scoring methodology.  The provided scoring options with reference ranges are:
+
+-	1 (0-20%)
+-	2 (21-40%)
+-	3 (41-60%)
+-	4 (61-80%)
+-	5(81-100%)
+-	Not Applicable
+-	Not Available
+
+Note that the “Not Applicable” and “Not Available” options will be treated, from a scoring perspective, the same as if the “1 (0-20%)” option were selected, which will yield a percentage score of 0 for that Sub-Control.
+
+The 1 – 5 Sub-Control score is converted to a percentage with the formula: (Score – 1) * 25.  This percentage score is displayed to the right side of the Sub-Control View.
+
+The scoring in CSAT Pro focuses on validated Sub-Controls.  Thus, a Control Average score is the average of the Sub-Controls under that Control that are both applicable and validated.  For instance, if only one Sub-Control in a Control has been validated with a score of 100, and there are two applicable Sub-Controls under that Sub-Control (including the one that has been validated), the Control Average will show 100, while the Control Validated percentage will only show 50.  It is this validated Control Average that is used on the Assessment Dashboard for the Control block heat map and the CIS Controls Implementation Graph.
+
+The overall Assessment Average is generated by averaging the validated Control Averages from applicable Controls.  A Control is considered applicable if at least one of its Sub-Controls is applicable.
+
+Industry Average Service
+------------
+By default, CIS CSAT Pro instances are opted out of the Industry Average Service; this means that CSAT Pro does not share any assessment data from the user’s on-premises instance back to CIS by default.
+
+Users can choose to opt in to the Industry Average Service. Users who do choose to opt in will receive industry average information for their selected industry or industries that will be displayed throughout the CSAT Pro instance, providing richer information in assessment dashboards and graphs. Opting in to the Industry Average Service also means that users will share anonymous assessment data (CIS Sub-Control scoring data) from their CSAT Pro instance securely with CIS over a TLS v1.3 connection. Sharing this anonymous data helps improve CIS’s industry average data set.
+
+Users who choose not to opt in will not receive the industry average data feed. Once opted in, you may choose to opt out of sharing your data at any time. If you opt out, the industry average subscription feed will also terminate.
+
+While the industry average information can be useful as a point of comparison for your organization, it should not be used to determine when your organization has reached an acceptable level of maturity in your implementation of the CIS Controls; the decision of what is an acceptable level of maturity for CIS Controls implementation for your organization should be made only after performing a thorough risk analysis for your organization. The industry average information provided is based on the self-assessed industry identification and self-assessed Sub-Control scoring of CSAT users; as such, this information is provided as a point of reference, and should not be the basis for organizational decisions.
+
+By opting in to the Industry Average Service, you and your organization agree to share anonymous assessment scoring data with CIS.
+
 
