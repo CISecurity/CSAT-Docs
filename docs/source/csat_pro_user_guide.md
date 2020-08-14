@@ -24,7 +24,7 @@ The license file will expire when your SecureSuite Membership expires.  Once you
 
 Privacy Policy
 ------------
-Please read the CIS CSAT Pro Privacy Policy prior to using CSAT Pro; it is available at https://workbench.cisecurity.org/files/2891 
+Please read the [CIS CSAT Pro Privacy Policy](https://workbench.cisecurity.org/files/2891) prior to using CSAT Pro.
 
 
 Getting Started
