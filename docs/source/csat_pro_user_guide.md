@@ -90,7 +90,7 @@ An Assessment Template is the combination of a Control Framework and a Scoring M
 ### Top Menu ###
 The Top Menu is present at the top of all pages in CSAT Pro.  From right to left, the Top Menu offers the following options:
 
-####Home Button#### 
+####Home Button####
 The Home button returns the user to the Home page.
 
 ####Support Center####
