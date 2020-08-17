@@ -66,10 +66,10 @@ By default, we select generating a self-signed PKCS12 certificate, to allow for 
 
 The second option is if you already have a certificate(self-signed or a certificate authority) that you would like CIS CSAT Pro to use. The default port for this option is **443**.
 
- - **Certificate** - 
- - **Alias** - 
- - **Keystore Password** - 
- - **Key Password** - 
+ - **Certificate** - File path to the existing certificate.
+ - **Alias** - Alias name for the existing certificate.
+ - **Keystore Password** - Keystore password for the existing certificate.
+ - **Key Password** - Key password for the existing password.
 
 
 ----------
@@ -81,8 +81,10 @@ The third option is our least recommended option in terms of security. This will
 In this section, the installer will be extracting all necessary files into the installation directory chosen. This process may take a few minutes.
 
 ####Set Up Database Admin####
+On this page, we need to set up the password for the Neo4j database admin user. By default, the user name is `neo4j`. The password has some requirements, which are: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
 
 ####Installing and Starting CIS CSAT Pro####
+Here, the installer is starting up the Neo4j service, and is creating and starting the CIS CSAT Pro service. This can take a few minutes.
 
 ####Finished####
 At this point, the installer has finished setting up and CIS CSAT Pro is starting. It may take a few minutes for the application to be accessible. From here, you can check out the User Guide on how to log in and use CIS CSAT Pro.
