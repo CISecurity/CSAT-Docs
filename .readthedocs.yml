@@ -2,3 +2,7 @@ version: 2
 
 formats:
     - pdf
+
+mkdocs:
+    configuration: mkdocs.yml
+    fail_on_warning: false
