@@ -18,7 +18,7 @@ Access to CSAT Pro requires a SecureSuite Membership.  Additional information on
 
 Your organization’s license file and configuration files can be obtained through CIS WorkBench [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, your organization’s Company Manager in WorkBench can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” on the right.  This will take the Company Manager to a page that shows the company’s Active License Keys.  The Company Manager should then download the license bundle.  If this page says “There are no active license keys for this organization”, then the Company Manager will need to contact [CIS Support](https://www.cisecurity.org/support/). 
 
-Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license-key.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the [CIS CSAT Pro Deployment Guide](https://csat.readthedocs.io/en/latest/source/CSAT%20Pro%20Deployment/).
+Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license-key.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the [CIS CSAT Pro Deployment Guide](./CSAT%20Pro%20Deployment/).
 
 The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available to your Company Manager in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation.  The path to your license file is also visible in CSAT Pro to System Admins when they navigate to the License Information page.
 
@@ -29,7 +29,7 @@ Please read the [CIS CSAT Pro Privacy Policy](https://workbench.cisecurity.org/f
 
 Getting Started
 ------------
-Information on setting up a CSAT Pro instance can be found in the [CIS CSAT Pro Deployment Guide](https://csat.readthedocs.io/en/latest/source/CSAT%20Pro%20Deployment/).  A default System Admin user is created during the installation process.  The default username is “admin” and the default password is “@admin123”.  You can use this default user to log in to CSAT Pro for the first time and to create other users.  It is strongly recommended that you change the password for this default user immediately, as this user has full access to the tool and the password is publicly available.
+Information on setting up a CSAT Pro instance can be found in the [CIS CSAT Pro Deployment Guide](./CSAT%20Pro%20Deployment/).  A default System Admin user is created during the installation process.  The default username is “admin” and the default password is “@admin123”.  You can use this default user to log in to CSAT Pro for the first time and to create other users.  It is strongly recommended that you change the password for this default user immediately, as this user has full access to the tool and the password is publicly available.
 
 
 The Basics
