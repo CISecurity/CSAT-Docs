@@ -142,7 +142,7 @@ Each organization/sub-organization is created with the following attributes:
 The user creating the organization is assigned the Organization Admin role for that organization by default.   That Organization Admin can then add an Organization Role for other users with the “Add Users” button from the Active Users section of that organization’s Organization Info page.
 
 
-### Creating an Assessment ###
+### Creating a New Blank Assessment ###
 Organization Admins can create new assessments from the Organization Info page for that organization.  The “Start New Assessment” button goes to a Create Assessment page that lets the user enter the information needed to create the assessment.
 
 Each assessment is created with the following attributes:
@@ -152,6 +152,8 @@ Each assessment is created with the following attributes:
 -	Assessment Template – the Control Framework and Scoring Method that the assessment will use.  CSAT Pro currently has the CIS Controls v7.1 with Simple Scoring available.
 -	Implementation Group – when an Assessment Template to which Implementation Groups apply is selected, an Implementation Group will need to be selected as well.  Implementation Groups apply to CIS Controls templates.
 
+
+### Importing an Assessment from CIS-Hosted CSAT ###
 Similarly, the “Import Assessment” button goes to an Import Assessment page that lets the user enter this same information.  The Import Assessment page requires one additional field; the user must use the “Choose File” button to browse to a spreadsheet file.  The selected spreadsheet file must be of the format of those exported from the CIS-Hosted version of CSAT (this spreadsheet can be exported from the CIS-Hosted version of CSAT using the “Control Summary Report” option in the “Reports” section of the menu on the left side of the page).  A detailed log indicating import successes and warnings will be generated and displayed following the import process.
 
 ### System Admin Pages ###
