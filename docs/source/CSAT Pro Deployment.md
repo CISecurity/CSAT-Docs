@@ -87,7 +87,7 @@ On this page, we need to set up the password for the Neo4j database admin user. 
 Here, the installer is starting up the Neo4j service, and is creating and starting the CIS CSAT Pro service. This can take a few minutes.
 
 ####Finished####
-At this point, the installer has finished setting up and CIS CSAT Pro is starting. It may take a few minutes for the application to be accessible. From here, you can check out the [User Guide]("../csat_pro_user_guide") on how to log in and use CIS CSAT Pro.
+At this point, the installer has finished setting up and CIS CSAT Pro is starting. It may take a few minutes for the application to be accessible. From here, you can check out the [User Guide](../csat_pro_user_guide) on how to log in and use CIS CSAT Pro.
 
 <a name="obtainingConfigFiles"></a>
 ## Obtaining Configuration Files##
