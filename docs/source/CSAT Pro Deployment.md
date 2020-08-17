@@ -25,9 +25,9 @@ The CIS-CAT Pro Dashboard officially supports **Google Chrome** web browser. Oth
 
 
  - Locate latest version of CIS CSAT Pro in the Downloads section of [CIS WorkBench](https://workbench.cisecurity.org/).
- - Download the CIS CSAT Pro Unix bundle from [CIS WorkBench](https://workbench.cisecurity.org/).
+ - Download the appropriate CIS CSAT Pro bundle from [CIS WorkBench](https://workbench.cisecurity.org/).
  - Extract the bundle on the machine you are using to host CIS CSAT Pro.
- - Execute the CIS CSAT Pro Installer (`CSAT_Pro_unix_Installer.sh`) as root or user that has root privileges.
+ - Execute the CIS CSAT Pro Installer (`CSAT_Pro_unix_Installer.sh or CSAT_Pro_windows-x64_Installer.exe`) as root or user that has root privileges.
 
 ####Welcome####
 First, you will be brought to a welcome screen, stating you are installing CIS CSAT Pro.
