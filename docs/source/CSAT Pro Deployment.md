@@ -14,7 +14,7 @@ Out test environment used an AWS t2.xlarge instance, which has:
  - 16GB RAM
  - 4 quad core vCPUs
 
-The operating system CIS used when testing CIS CSAT Pro was Windows Server 2019 and Ubuntu 18.04.
+The operating system CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04.
 
 ### Web Browser###
 The CIS-CAT Pro Dashboard officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
