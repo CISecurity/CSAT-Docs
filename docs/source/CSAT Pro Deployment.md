@@ -133,6 +133,8 @@ Execute the following commands as root or user that has root privileges (use "su
 	
 	rm /etc/systemd/system/neo4j
 
+Note: the `CSAT` service is linked to the installer directory, so once disabled, the link should disappear from `/etc/systemd/system/`
+
 4) Delete your installer directory.
 
 5) Reload all unit files:
