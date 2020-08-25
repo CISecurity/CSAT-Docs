@@ -94,3 +94,47 @@ At this point, the installer has finished setting up and CIS CSAT Pro is startin
 Your organization’s license file and configuration files can be obtained through CIS WorkBench [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, your organization’s Company Manager in WorkBench can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” on the right.  This will take the Company Manager to a page that shows the company’s Active License Keys.  The Company Manager should then download the license bundle.  If this page says “There are no active license keys for this organization”, then the Company Manager will need to contact [CIS Support](https://www.cisecurity.org/support/). 
 
 Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license-key.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the Select Configuration and License Directories section.
+
+## Uninstalling CIS CSAT Pro##
+
+Here are the steps to manually uninstall CSAT Pro from your system.
+
+###Windows Server 2019 environment###
+
+1) Stop `neo4j` and `CSAT_Pro Windows` services from Windows Services application. 
+
+Note: Windows Services application is accessible by typing `Services` in the Windows search.
+
+2) Delete your install directory
+
+3) Delete `CSAT_CONFIG_FILE` and `CSAT_LOG_DIR` environment variables
+
+4) Delete `JAVA_HOME` environment variable if `JAVA_HOME` points to your installer directory 
+
+5) Run a command prompt as an administrator and delete both services with the following command: 
+
+	SC DELETE neo4j
+	SC DELETE "CSAT_Pro Windows"
+
+###Ubuntu 18 environment###
+Execute the following commands as root or user that has root privileges (use "sudo" or "su" to elevate your privileges)
+
+1) Stop `neo4j` and `CSAT` services:
+
+	systemctl stop CSAT
+	systemctl stop neo4j
+
+2) Disable `neo4j` and `CSAT` services:
+
+	systemctl disable CSAT
+	systemctl disable neo4j
+
+3) Delete `neo4j` service:
+	
+	rm /etc/systemd/system/neo4j
+
+4) Delete your installer directory
+
+5) Reload all unit files:
+ 
+	systemctl daemon-reload
