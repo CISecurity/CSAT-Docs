@@ -105,11 +105,11 @@ Here are the steps to manually uninstall CSAT Pro from your system.
 
 Note: Windows Services application is accessible by typing `Services` in the Windows search.
 
-2) Delete your install directory
+2) Delete your install directory.
 
-3) Delete `CSAT_CONFIG_FILE` and `CSAT_LOG_DIR` environment variables
+3) Delete `CSAT_CONFIG_FILE` and `CSAT_LOG_DIR` environment variables.
 
-4) Delete `JAVA_HOME` environment variable if `JAVA_HOME` points to your installer directory 
+4) Delete `JAVA_HOME` environment variable if `JAVA_HOME` points to your installer directory.
 
 5) Run a command prompt as an administrator and delete both services with the following command: 
 
@@ -117,7 +117,7 @@ Note: Windows Services application is accessible by typing `Services` in the Win
 	SC DELETE "CSAT_Pro Windows"
 
 ###Ubuntu 18 environment###
-Execute the following commands as root or user that has root privileges (use "sudo" or "su" to elevate your privileges)
+Execute the following commands as root or user that has root privileges (use "sudo" or "su" to elevate your privileges).
 
 1) Stop `neo4j` and `CSAT` services:
 
@@ -133,7 +133,7 @@ Execute the following commands as root or user that has root privileges (use "su
 	
 	rm /etc/systemd/system/neo4j
 
-4) Delete your installer directory
+4) Delete your installer directory.
 
 5) Reload all unit files:
  
