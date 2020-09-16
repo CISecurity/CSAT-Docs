@@ -239,7 +239,7 @@ The Sub-Control View provides the title of the Sub-Control which can be used to 
 
 Below the Sub-Control title bar is the Sub-Control title and description.  
 
-#####Left Side#####
+#####Sub-Control View - Left Side#####
 On the left side of the Sub-Control View, there is a drop down to score the Sub-Control; new scores are automatically saved when selected in this drop down.
 
 Below that are workflow buttons.  The buttons available vary as different actions are performed.  These buttons include:
@@ -261,7 +261,7 @@ Evidence files can be uploaded to the task with the Upload Evidence button, whic
 
 Below the workflow buttons and Evidence section (if present) is the History section.  The History section serves as a log for that task’s events.  It provides details on the action that occurred, which user performed the action, and when that action took place.
 
-#####Right Side#####
+#####Sub-Control View - Right Side#####
 On the right side of the Sub-Control View you can find additional information on the Sub-Control including:
 
 - Score - the Sub-Control’s current score converted to a 0 – 100 scale
