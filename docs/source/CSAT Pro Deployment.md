@@ -3,8 +3,11 @@
 
 # CIS CSAT Pro Deployment Guide#
 ----------
+<a name="introduction"></a>
 ##Introduction ##
-CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems, whether GUI based, or server based. The  installer for CIS CSAT Pro is an all-in-one package, so it will set up the application, database, and services for you. We use an embedded version of <b>Tomcat 9</b> that comes packaged with Grails, and we also supply <b>Java 11</b> that is used for the <b>Neo4j 3.5 database</b>, as well as CIS CSAT Pro.
+CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems, whether GUI based, or server based. The  installer for CIS CSAT Pro  will set up the application, database, and services for you. We use an embedded version of **Tomcat 9** that comes packaged with Grails, and we also supply **Java 11** that is used for the **Neo4j 3.5 database**, as well as CIS CSAT Pro.
+
+**Please note, you will need to download the Neo4j bundle from their download center, located [here](https://neo4j.com/download-center/#community). Please select the most recent version of Neo4j Community Edition 3.5 for the operating system on which you are installing CIS CSAT Pro.**
 
 ## System Recommendations ##
 While there is no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We do recommend to have adequate size of disk space, as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
@@ -21,7 +24,7 @@ The CIS-CAT Pro Dashboard officially supports **Google Chrome** web browser. Oth
 
 <a name=""></a>
 ## Installing CIS CSAT Pro##
-<b>This section will do a step-by-step guide on how to deploy CIS CSAT Pro, as well as the Neo4j database.</b>
+**This section will do a step-by-step guide on how to deploy CIS CSAT Pro, as well as the Neo4j database.**
 
 
  - Locate latest version of CIS CSAT Pro in the Downloads section of [CIS WorkBench](https://workbench.cisecurity.org/).
@@ -38,10 +41,10 @@ Select the location of where the CIS CSAT Pro application, as well as Neo4j data
 ####Select Configuration and License Directories####
 On this screen, you will be selecting the configuration and license files needed for the application. You can find out more information on how to get these files in the [Obtaining Configuration Files](#obtainingConfigFiles) section in the deployment guide. We ask that these files are kept in the same directory with each other. If they aren't, the application will not be able to run.
 
-The first file to be selected is the <b>Integration Configuration File</b>. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
+The first file to be selected is the **Integration Configuration File**. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
 
 
-The next file to be selected is the <b>License Key</b> file. Please enter the path to the <u>license-key.xml</u> file, including the file name.
+The next file to be selected is the **License Key** file. Please enter the path to the <u>license-key.xml</u> file, including the file name.
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
@@ -79,6 +82,9 @@ The third option is our least recommended option in terms of security. This will
 
 ####Installation####
 In this section, the installer will be extracting all necessary files into the installation directory chosen. This process may take a few minutes.
+
+###Download Neo4j Server##
+Here, you will need to go through the file selector, and select the bundled Neo4j server file you downloaded, as mentioned in the [**introduction**](#introduction). There is no need to unzip the file from Neo4j, as the installer application will handle all of this for you.
 
 ####Set Up Database Admin####
 On this page, we need to set up the password for the Neo4j database admin user. By default, the user name is `neo4j`. The password has some requirements, which are: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
