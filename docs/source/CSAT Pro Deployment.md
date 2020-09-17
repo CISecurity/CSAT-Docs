@@ -95,6 +95,9 @@ Here, the installer is starting up the Neo4j service, and is creating and starti
 ####Finished####
 At this point, the installer has finished setting up and CIS CSAT Pro is starting. It may take a few minutes for the application to be accessible. To get access to the site, please go to `https://<hostname>` if you are using TLS, or `http://<hostname>:8080` if you chose to not use TLS. From here, you can check out the [User Guide](../csat_pro_user_guide) on how to log in and use CIS CSAT Pro.
 
+##Upgrading CIS CSAT Pro##
+If you are updating CIS CSAT Pro, we have worked on making this process as easy as possible. Download the new version of CIS CSAT Pro from WorkBench, and run the installer executable on the machine that has CIS CSAT Pro installed. The installer will detect an existing installation and ask you to verify the installation directory. At this point, it will stop the CIS CSAT Pro application, deploy the new version of the application, and start the application back up. Just like the initial install, it will take the application a few minutes to fully come back up.
+
 <a name="obtainingConfigFiles"></a>
 ## Obtaining Configuration Files##
 Your organization’s license file and configuration files can be obtained through CIS WorkBench [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, your organization’s Company Manager in WorkBench can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” on the right.  This will take the Company Manager to a page that shows the company’s Active License Keys.  The Company Manager should then download the license bundle.  If this page says “There are no active license keys for this organization”, then the Company Manager will need to contact [CIS Support](https://www.cisecurity.org/support/). 
