@@ -312,4 +312,27 @@ While the industry average information can be useful as a point of comparison fo
 
 By opting in to the Industry Average Service, you and your organization agree to share anonymous assessment scoring data with CIS.
 
+CIS Controls
+------------
+The CIS Controls are a prioritized set of actions that collectively form a defense-in-depth set of best practices that mitigate the most common attacks against systems and networks. The CIS Controls are developed by a community of IT experts who apply their first-hand experience as cyber defenders to create these globally accepted security best practices. The experts who develop the CIS Controls come from a wide range of sectors including retail, manufacturing, healthcare, education, government, defense, and others.
+
+The CIS Controls consist of 20 top-level Controls that serve as categories to house 171 Sub-Controls.  Each CIS Sub-Control is a specific safeguard that can be implemented or action that can be performed to improve an organization’s cyber defense program.
+
+To download the CIS Controls and see the other companion resources that are available, please visit the [CIS Controls](https://www.cisecurity.org/controls/).
+
+### Implementation Groups ###
+In v7.1 of the CIS Controls, Implementation Groups (IGs) were introduced.  Implementation Groups put the 171 Sub-Controls into 3 groups to help organizations prioritize which Sub-Controls to implement first.  CIS recommends that all organizations implement IG1, as the IG1 Sub-Controls represent basic cyber hygiene.  Based on the resources available to the organization, as well the criticality of the data and services that the organization needs to protect, the organization can determine whether they should also implement additional Sub-Controls from IG2 and IG3.  Each Implementation Group builds on the lower Implementation Groups; thus an organization implementing IG2 should also implement IG1, and an organization implementing IG3 should implement all three Implementation Groups.
+
+The following are some general guidelines to help organizations determine which Implementation Groups are right for them:
+
+####IG1####
+Organizations with limited resources where the sensitivity of data is low will need to implement the Sub-Controls that typically fall into the IG1 category.
+
+####IG2####
+Organizations with moderate resources and greater risk exposure for handling more sensitive assets and data will need to implement the IG2 controls along with IG1. These Sub-Controls focus on helping security teams manage sensitive client or company information.
+
+####IG3####
+Mature organizations with significant resources and high risk exposure for handling critical assets and data need to allocate the Sub-Controls under the IG3 category along with IG1 and IG2. The Sub-Controls that help reduce the impact targeted attacks from sophisticated adversaries typically fall into IG3.
+
+A useful reference that lists all of the Sub-Controls and which Implementation Group they belong to can be found at: [CIS Controls Implementation Groups Reference](https://www.cisecurity.org/white-papers/cis-controls-v7-1-implementation-groups/). 
 
