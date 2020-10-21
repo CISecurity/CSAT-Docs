@@ -228,7 +228,7 @@ At the top right of the Assessment Dashboard, users can export reports and close
 - Export CSV - Both Organization Admins and Full Users have access to this button.  This button allows users to export a Sub-Control level spreadsheet in csv format.  This report contains information similar to what is found in the Assessment Summary tab.
 - Export Board Level Slides - Both Organization Admins and Full Users have access to this button.  This button allows users to export a set of slides containing high level assessment summary information in pptx format.  This report contains information and graphs from the Assessment Dashboard, as well as the Assessment History graph from the Organization Info page.
 
-At the top left of the Assessment Dashboard, users can select different assessment tabs to switch between the Assessment Dashboard, the Assessment Summary, the Assessment Event Log, and the Assessment Calendar.
+At the top left of the Assessment Dashboard, users can select different assessment tabs to switch between the Assessment Dashboard, the Assessment Summary, the Assessment Event Log, and the Task Calendar.
 
 ####Assessment Summary Page####
 The Assessment Summary tab takes users to a listing of the assessment’s Sub-Controls showing task status information including its number, title, and whether it is applicable, assigned, completed, and/or validated.  Hovering over a green check mark on this page will display the user who performed the action.  Hovering over the check marks in the Assigned column will also display the due date for the task.  Users can switch to the other Assessment tabs in the upper left of the Assessment Summary page.
