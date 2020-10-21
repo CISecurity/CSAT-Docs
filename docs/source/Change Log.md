@@ -3,6 +3,17 @@
 # Change Log #
 
 ----------
+## CIS CSAT Pro v1.2.0 ##
+ 
+### CIS CSAT Pro Updates ###
+ - Ability to visualize the Task Calendar
+ - CIS Controls Framework is now mapped to PCI DSS v3.2.1 Framework
+ - Ability to create Custom Tags tied to an Assessment Sub-Control
+ - The Assessment Summary page can be filtered with multiple criteria including Custom Tags and other task properties
+ - Discussions feature gives the ability to users to add comments to an Assessment Sub-Control
+ - Ability to view the Assessment Event Log
+ - Ability to upload your Organization Logo
+
 ## CIS CSAT Pro v1.1.0 ##
  
 ### CIS CSAT Pro Updates ###

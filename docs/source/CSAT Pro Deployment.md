@@ -100,9 +100,13 @@ If you are updating CIS CSAT Pro, we have worked on making this process as easy 
 
 <a name="obtainingConfigFiles"></a>
 ## Obtaining Configuration Files##
-Your organization’s license file and configuration files can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button.  If this page says “There are no active license keys for this organization”, then the member will need to contact [CIS Support](https://www.cisecurity.org/support/).  
+Your organization’s license file and configuration files can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button as following: 
 
-Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license-key.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the Select Configuration and License Directories section.
+![](img/WorkBenchLicenseLocation.png)
+
+Note: If this page says “There are no active license keys for this organization”, then the member will need to contact [CIS Support](https://www.cisecurity.org/support/).  
+
+Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the Select Configuration and License Directories section.
 
 ## Uninstalling CIS CSAT Pro##
 
