@@ -100,7 +100,7 @@ If you are updating CIS CSAT Pro, we have worked on making this process as easy 
 
 <a name="obtainingConfigFiles"></a>
 ## Obtaining Configuration Files##
-Your organization’s license file and configuration files can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button as following: 
+Your organization’s license file and configuration files can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button as follows: 
 
 ![](img/WorkBenchLicenseLocation.png)
 
