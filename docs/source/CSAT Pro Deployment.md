@@ -44,7 +44,7 @@ On this screen, you will be selecting the configuration and license files needed
 The first file to be selected is the **Integration Configuration File**. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
 
 
-The next file to be selected is the **License Key** file. Please enter the path to the <u>license-key.xml</u> file, including the file name.
+The next file to be selected is the **License Key** file. Please enter the path to the <u>license.xml</u> file, including the file name.
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
