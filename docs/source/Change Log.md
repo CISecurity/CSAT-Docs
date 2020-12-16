@@ -3,6 +3,22 @@
 # Change Log #
 
 ----------
+## CIS CSAT Pro v1.3.0 ##
+ 
+### CIS CSAT Pro Updates ###
+ - Ability to import a CSAT Pro CSV file as a new Assessment
+ - Ability to edit the Assessment Details for existing assessments
+ - The number of each Sub-Control is displayed in the Sub-Control View/Task View
+ - Each Task in the Assessment Summary Page is now clickable and redirects to the Sub-Control View/Task View
+ - Column Order changed for the CSV Export to better reflect the order of the workflow
+ - More accurate message when Implementation Group of the Assessment is changed
+ - Fixed a bug in the Installer that can prevent the Windows Neo4j service from starting after a system reboot
+ - Fixed a bug in the Installer that can prevent a Linux Neo4j script from being executed
+ - Fixed a bug which shows a warning message on successful rows during the Assessment Import of a Hosted CSAT XLS file
+
+### Documentation Updates ###
+ - Additional information on bundle extraction directory to avoid permission issues in Windows environment.
+
 ## CIS CSAT Pro v1.2.0 ##
  
 ### CIS CSAT Pro Updates ###
