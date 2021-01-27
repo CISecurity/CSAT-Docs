@@ -3,6 +3,16 @@
 # Change Log #
 
 ----------
+## CIS CSAT Pro v1.4.0 ##
+
+### CIS CSAT Pro Updates ###
+ - Ability to delete assessments
+ - Ability to Unassign tasks
+ - CIS Controls Framework is now mapped to NIST CSF v1.1 Framework
+ - Mapping section is grouped by Control Frameworks and sorted
+ - User Profiles are now accessible from Sub-Control View/Task View for "Assigned To/By", "Completed By" and "Validated By" users
+ - Organization Logos appear in Organization Chart and Board Level Slides export
+
 ## CIS CSAT Pro v1.3.0 ##
  
 ### CIS CSAT Pro Updates ###
@@ -17,7 +27,7 @@
  - Fixed a bug which shows a warning message on successful rows during the Assessment Import of a Hosted CSAT XLS file
 
 ### Documentation Updates ###
- - Additional information on bundle extraction directory to avoid permission issues in Windows environment.
+ - Additional information on bundle extraction directory to avoid permission issues in Windows environment
 
 ## CIS CSAT Pro v1.2.0 ##
  
@@ -41,7 +51,7 @@
  - Task Reminder feature to remind users when a task needs to be completed or validated
  - CIS CSAT Pro Installer updates including the ability to recognize and upgrade existing CSAT Pro installations on the machine
  - Fixed a bug that prevents the tool from running in an environment without an internet connection
- - Fixed a bug where the Task applicable toggle for one task could disable evidence file download/deletion actions for different tasks on the same page prior to reload.
+ - Fixed a bug where the Task applicable toggle for one task could disable evidence file download/deletion actions for different tasks on the same page prior to reload
 
 ### Documentation Updates ###
  - Steps to Uninstall the tool in Windows and Linux
