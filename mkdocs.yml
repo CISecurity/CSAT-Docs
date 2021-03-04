@@ -5,6 +5,7 @@ nav:
     - Change Log: source/Change Log.md
     - CSAT Pro Deployment Guide: source/CSAT Pro Deployment.md
     - CSAT Pro User Guide: source/csat_pro_user_guide.md
+    - CSAT Pro Troubleshooting: source/troubleshooting.md
 
 theme:
     name: readthedocs
