@@ -3,6 +3,18 @@
 # Change Log #
 
 ----------
+## CIS CSAT Pro v1.5.0 ##
+
+### CIS CSAT Pro Updates ###
+ - Ability to copy an assessment
+ - Ability to bulk assign users from Assessment Summary page
+ - Fixed a bug with the "Implementation Group" dropdown action so it only applies to the current assessment
+
+**Important:**
+This bug deals with the applicability of Sub-Controls in assessments. If all the assessments in your CSAT Pro instance use the same IG and you don't use any custom applicability flags for individual Sub-Controls, then this bug shouldn’t affect you.
+If you have assessments with different IG or custom applicability flags, please verify that the applicability flag for each Sub-Control/task is set to the intended state. 
+More information on this can be found in the [Troubleshooting page](../troubleshooting).
+
 ## CIS CSAT Pro v1.4.0 ##
 
 ### CIS CSAT Pro Updates ###
