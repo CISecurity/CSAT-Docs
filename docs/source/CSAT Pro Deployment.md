@@ -109,6 +109,32 @@ Note: If this page says “There are no active license keys for this organizatio
 
 Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the Select Configuration and License Directories section.
 
+<a name="restartingCSATService"></a>
+## Restarting CIS CSAT Pro application service##
+
+Restarting CSAT Pro application service is required for example when the [license is renewed](../csat_pro_user_guide/#license).
+
+The following steps will not wipe your existing data.
+
+Here are the steps to restart CSAT Pro application service from your system.
+
+
+###Windows Server 2019 environment###
+
+1) Go to Windows Services application
+
+2) Right click `restart` on `CSAT_Pro Windows` service. 
+
+Note: Windows Services application is accessible by typing `Services` in the Windows search.
+
+###Ubuntu 18 environment###
+Execute the following command as root or user that has root privileges (use "sudo" or "su" to elevate your privileges).
+
+1) Restart `CSAT` service with the following command:
+
+	systemctl restart CSAT
+
+
 ## Uninstalling CIS CSAT Pro##
 
 Here are the steps to manually uninstall CSAT Pro from your system.

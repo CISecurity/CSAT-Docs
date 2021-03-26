@@ -18,7 +18,14 @@ Access to CSAT Pro requires a SecureSuite Membership.  Additional information on
 
 See [Obtaining Configuration Files](../CSAT%20Pro%20Deployment/#obtaining-configuration-files) in the [CIS CSAT Pro Deployment Guide](../CSAT%20Pro%20Deployment/) for more details on downloading your license file bundle.
 
-The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation.  The path to your license file is also visible in CSAT Pro to System Admins when they navigate to the License Information page.
+The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation. The path to your license file is also visible in CSAT Pro to System Admins when they navigate to the License Information page. 
+The path is also visible from `CSAT_PRO_INSTALL_DIR/conf/csat-config.yml` in the following section:
+
+		csat:
+    		license:
+        		filepath: C:\path_of_my_license_dir\license.xml
+
+Once you've put the updated files in place, then restart the CSAT Pro service according to the instructions in [Restarting CIS CSAT Pro application service](../CSAT%20Pro%20Deployment/#restartingCSATService).
 
 
 Privacy Policy
