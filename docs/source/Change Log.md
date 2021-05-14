@@ -6,26 +6,17 @@
 ## CIS CSAT Pro v1.6.0 ##
 
 ### CIS CSAT Pro Updates ###
-
-
-
-
-**CIS Controls v8.0 support, including:**
-
-   -	The ability to select between CIS Controls v7.1 and v8.0 when creating an assessment
-   -	CIS Controls v8.0 exports (Board Level Slides and CSV spreadsheet)
-   -	Copy Assessment functionality for Controls v8.0 assessments
-   -	CIS Controls v8.0 Safeguard mappings to NIST CSF and NIST 800-53 Rev 5
-   -	For users that opt in to the industry average service - please note that industry averages for Controls v8 assessments will display "0" for the time being.  Industry averages for Controls v7.1 assessments will continue to function as usual.  The v8 industry averages will be turned on in the near future, at which time there will be separate industry averages based on which version of the CIS Controls (v7.1 or v8.0) is specified for the assessment.
-
-**Addition of two new bulk actions to the Assessment Summary page:**
-
-   -	Bulk unassign – the ability to unassign users from multiple tasks at once
-   -	Bulk applicability toggle – the ability to toggle the applicability of multiple tasks at once
-
-**Uploaded evidence files can now also be downloaded from Validated Safeguards/Sub-Controls, Closed Assessments, and Safeguards/Sub-Controls that are marked as Not Applicable**
-
-**Performance and security improvements**
+- CIS Controls v8.0 support, including:
+    - The ability to select between CIS Controls v7.1 and v8.0 when creating an assessment
+    - CIS Controls v8.0 exports (Board Level Slides and CSV spreadsheet)
+    - Copy Assessment functionality for Controls v8.0 assessments
+    - CIS Controls v8.0 Safeguard mappings to NIST CSF and NIST 800-53 Rev 5
+    - For users that opt in to the industry average service - please note that industry averages for Controls v8 assessments will display "0" for the time being.  Industry averages for Controls v7.1 assessments will continue to function as usual.  The v8 industry averages will be turned on in the near future, at which time there will be separate industry averages based on which version of the CIS Controls (v7.1 or v8.0) is specified for the assessment.
+- Addition of two new bulk actions to the Assessment Summary page:
+    - Bulk unassign – the ability to unassign users from multiple tasks at once
+    - Bulk applicability toggle – the ability to toggle the applicability of multiple tasks at once
+- Uploaded evidence files can now also be downloaded from Validated Safeguards/Sub-Controls, Closed Assessments, and Safeguards/Sub-Controls that are marked as Not Applicable
+- Performance and security improvements
 
 **Important:**
 In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Sub-Controls in assessments. 
