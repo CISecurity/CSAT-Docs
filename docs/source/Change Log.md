@@ -21,7 +21,7 @@
 **Important:**
 In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Sub-Controls in assessments. 
 If you have pre-v1.5.0 assessments that used custom Sub-Control applicability (rather than one of the standard Implementation Groups), 
-or used different Implementation Groups for different assessments, be sure to review the details at [Troubleshooting page](../troubleshooting). 
+or used different Implementation Groups for different assessments, be sure to review the details on the [Troubleshooting page](../troubleshooting). 
 If you do have any applicability adjustments to make, the new bulk applicability toggle on the Assessment Summary page might make the process easier.
 
 
