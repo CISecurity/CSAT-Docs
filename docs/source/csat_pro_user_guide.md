@@ -5,7 +5,7 @@ CSAT Pro User Guide
 
 Introduction
 ------------
-The CIS Controls Self Assessment Tool (CSAT) is a web application that helps organizations track their implementation of the CIS Controls down to the Sub-Control level.  CSAT provides a workflow to facilitate collaboration among team members as they self-assess the organization’s CIS Controls implementation.
+The CIS Controls Self Assessment Tool (CSAT) is a web application that helps organizations track their implementation of the CIS Controls down to the Safeguard/Sub-Control level (please note that Safeguard is the newer term in CIS Controls v8, while Sub-Control was the term used previously in CIS Controls v7.1; both CSAT and this guide use the two terms interchangeably).  CSAT provides a workflow to facilitate collaboration among team members as they self-assess the organization’s CIS Controls implementation.
 
 A free, CIS-Hosted version of CSAT was released in early 2019 and is available at [CIS CSAT](https://csat.cisecurity.org/).
 
@@ -90,8 +90,10 @@ The My Organizations section displays the Organization Name, Industry, and the c
 #### My Assessments ####
 The My Assessments section displays the assessments associated with the organizations in the My Organization section.  The following information is displayed for each assessment in the list - Assessment Name, Assessment Template, Start Date, Due Date for open assessments (or Closed Date for closed assessments), Organization, and Action icons for any actions that the current user is permitted for the particular assessment (action icons can let you view the assessment’s dashboard, edit the assessment’s name/dates, view a list of tasks to complete, view a list of tasks pending for validation, or delete an assessment).  There is an Open tab and a Closed tab that allow the user to toggle between open and closed assessments.
 #### Assessment Templates ####
-An Assessment Template is the combination of a Control Framework and a Scoring Method.  The Assessment Template section lists the Assessment Templates available in this CSAT Pro instance and describes the Control Framework and Scoring Method for each.  CSAT Pro currently has the CIS Controls v7.1 with Simple Scoring available.  
+An Assessment Template is the combination of a Control Framework and a Scoring Method.  The Assessment Template section lists the Assessment Templates available in this CSAT Pro instance and describes the Control Framework and Scoring Method for each.  CSAT Pro currently has two Assessment Templates available: 
 
+-	CIS Controls v7.1 with Simple Scoring
+-	CIS Controls v8.0 with Simple Scoring
 
 ### Top Menu ###
 The Top Menu is present at the top of all pages in CSAT Pro.  From right to left, the Top Menu offers the following options:
@@ -139,7 +141,7 @@ The Assessments section displays a list of the assessments that exist in this or
 The Organization History section displays event log information for that organization including user changes (users added to the organization, users removed from the organization, and role modifications for users in the organization) as well as changes to the organization's info (name, website, and industry).  Organization/Sub-organization creation and deletion events are also displayed.  Sub-organization creation and deletion are logged in the immediate parent of the sub-organization, as well as in the top-level organization for that organization tree.  Assessments that are deleted as part of sub-organization deletions are also logged to both the immediate parent and top-level organizations.
 
 ####Assessment History Section####
-The Assessment History section shows a graph of the closed assessments for this organization to show how the organization’s assessment scores have changed over time.
+The Assessment History section shows a graph of the closed assessments for this organization to show how the organization’s assessment scores have changed over time.  This graph will display separate lines by Control Framework if the organization has closed assessments from more than one Control Framework (if the organization has some closed CIS Controls v7.1 assessments, and some closed CIS Controls v8.0 assessments, for instance).
 
 
 ### Creating a New Organization ###
@@ -163,7 +165,7 @@ Each assessment is created with the following attributes:
 
 -	Name – The name for the assessment does not need to be unique
 -	Due Date – The due date is the desired date to complete the assessment
--	Assessment Template – the Control Framework and Scoring Method that the assessment will use.  CSAT Pro currently has the CIS Controls v7.1 with Simple Scoring available.
+-	Assessment Template – the Control Framework and Scoring Method that the assessment will use.  CSAT Pro users can select between CIS Controls v7.1 with Simple Scoring and CIS Controls v8.0 with Simple Scoring.
 -	Implementation Group – when an Assessment Template to which Implementation Groups apply is selected, an Implementation Group will need to be selected as well.  Implementation Groups apply to CIS Controls templates.
 
 
@@ -173,7 +175,7 @@ The “Import Assessment” button also lets users create a new assessment, but 
 -	a CSV file that was previously exported from CSAT Pro
 -	an XLSX file that was previously exported from CIS-Hosted CSAT (using the “Control Summary Report” option in the “Reports section of the menu on the left side of the page)
 
-The Import Assessment page lets the user enter the same information as described above for a new blank assessment, but requires two additional fields:
+Note: currently only CIS Controls v7.1 spreadsheets can be imported.  The Import Assessment page lets the user enter the same information as described above for a new blank assessment, but requires two additional fields:
 
 -	Source – Select either “CSAT Pro CSV” or “Hosted CSAT XLS” from the drop down depending on the origin of the spreadsheet to be imported
 -	Assessment to Import – Use the “Choose File” button to browse to a spreadsheet file.  The selected spreadsheet file must be of the format of those exported from the selected Source.
@@ -235,7 +237,7 @@ Below that information are several graphs:
 
 -	CIS Controls Implementation Average graph - This is a bar graph that shows current average for each Control (color coded to the same score ranges as indicated by the legend).  If the organization is opted in to the Industry Average Service, each Control will also have a bar indicating the industry average for that Control.  Hovering over a bar will show the Control number, the specific average, and whether that represents this assessment (org average) or the industry average.  Also, if opted in, the number of organizations used for the industry average is provided at the bottom of this graph.
 -	Monthly Assessment Average graph – This line graph shows a monthly snapshot of the overall assessment score so that users can see how the assessment score has changed over time.  If opted in to the Industry Average Service, there will also be a separate line representing the industry average.  The snapshot for the previous month is generally taken on the first day of the following month if the CSAT Pro instance is up and running (for instance, the August data would typically appear on the 1st day of September).
--	Implementation Group Averages graph – This graph has a bar for each of the three CIS Controls Implementation Groups (IG1, IG2, and IG3).  The scores for these bars use an exclusive definition for each IG when determining the score – thus, the IG3 bar does not factor in Sub-Controls that are in IG1 or IG2.  Unlike the other graphs, this graph does not take the assessment’s Sub-Control applicability into account; the IG3 bar represents the assessment’s average of the 31 IG3 Sub-Controls, regardless of whether this assessment has some or all of those Sub-Controls marked as Not Applicable.
+-	Implementation Group Averages graph – This graph has a bar for each of the three CIS Controls Implementation Groups (IG1, IG2, and IG3).  The scores for these bars use an exclusive definition for each IG when determining the score – thus, the IG3 bar does not factor in Safeguards that are in IG1 or IG2.  Unlike the other graphs, this graph does not take the assessment’s Safeguard applicability into account; the IG3 bar represents the assessment’s average of the IG3 Safeguards, regardless of whether this assessment has some or all of those Safeguards marked as Not Applicable.
 
 At the top right of the Assessment Dashboard, users can export reports and close/reopen an assessment.  Depending on the user's role in the organization, the following buttons can be found there:
 
@@ -266,6 +268,9 @@ The Assessment Summary page also allows bulk actions to be performed on tasks in
 The Bulk Edit actions that are currently available are:
 
 -	Bulk Assign – Using “Assign User” from the Bulk Edit drop down menu, one or more tasks can be assigned.  A pop-up window will be displayed where the user can enter the required information (user to Assign To and the Due Date) along with an optional comment.  After entering this information and pressing Submit, a summary of the assignments will be displayed in a message banner containing information about how many tasks were successfully assigned, how many tasks were reassigned (tasks that were previously assigned), and how many tasks were unable to be assigned (tasks that are Completed, Validated, or Not Applicable cannot be assigned).  A single email will be sent to the Assign To user containing a list of the tasks that they were successfully assigned to; like the singular assign functionality, no email will be sent when users are assigning tasks to themselves.
+-	Bulk Applicability Toggle – Using “Toggle Applicability” from the Bulk Edit drop down menu, the applicability for one or more tasks can be set at once.  A pop-up window will be displayed where the user can select the desired applicability for the selected tasks using the toggle (Not Applicable is selected when the toggle is on the left side; Applicable is selected when the toggle is on the right side).  Once the desired applicability is chosen and the user presses the Submit button, the tasks applicability will be updated and a summary message banner will appear to indicate how many tasks were set to the new value and how many were already in the selected state.
+-	Bulk Unassign – Using “Unassign User” from the Bulk Edit drop down menu, the assigned users for multiple tasks can be unassigned from those tasks at once.  A pop-up window will appear allowing the user to either press the Submit button to proceed with the unassignment, or to press the Close button to cancel without updating the tasks.  After the user clicks the Submit button, a message banner will appear to indicate the results including how many tasks were successfully unassigned, how many did not have an assigned user prior to this bulk action, and how many could not be unassigned (asks that are Completed/Validated or that are Not Applicable cannot be unassigned). 
+
 
 ####Event Log####
 The assessment’s Event Log tab displays a history of events for that assessment.  Entries are currently created for events such as blank assessment creation (either blank or from an import file), assessment closing/reopening, and changes to the assessment’s Implementation Group.  Each log entry includes the user who performed the action and the date/time of the action.  Users can switch to the other Assessment tabs in the upper left of the assessment Event Log page.
@@ -276,8 +281,8 @@ The assessment’s Calendar tab displays a calendar of tasks by due date.  All t
 ####Control View####
 The Control View can be reached by clicking on a Control block in the Control Block Heat Map on the Assessment Dashboard.  This view provides the Control title and description.  It has the overall Assessment Average, but it also has Control level summary statistics including the Control Average, the Industry Control Average (if subscribed), the percentage completed for the Control, and the percentage validated for the Control.  Below that, it lists all of the Sub-Controls for that Control.  Each of these can be expanded by clicking on the Sub-Control number/title, which will show the Sub-Control View for that Sub-Control.
 
-####Sub-Control View / Task View####
-The Sub-Control View (also referred to as the Task View) provides the number and title of the Sub-Control which can be used to collapse or expand that Sub-Control.  To the right of the title is the Implementation Group for that Sub-Control (IG-1, IG-2, or IG-3) and an applicability toggle to indicate whether the Sub-Control is applicable or not for the assessment.
+####Safeguard / Sub-Control View / Task View####
+The Safeguard View (also referred to as the Sub-Control or Task View) provides the number and title of the Sub-Control which can be used to collapse or expand that Sub-Control.  To the right of the title is the Implementation Group for that Sub-Control (IG-1, IG-2, or IG-3) and an applicability toggle to indicate whether the Sub-Control is applicable or not for the assessment.
 
 Below the Sub-Control title bar is the Sub-Control number, title, and description.
 
@@ -310,7 +315,9 @@ Below the workflow buttons and Evidence section (if present) are the Discussion 
 On the right side of the Sub-Control View you can find additional information on the Sub-Control including:
 
 - Score - the Sub-Control’s current score converted to a 0 – 100 scale
-- Mappings – This section displays mappings to other frameworks.  A block will appear for each mapping indicating the framework and identifier within that framework to which this Sub-Control is mapped.  Users can click these blocks to pop-up additional information on that mapping.  Currently, CSAT Pro displays the mappings for NIST 800-53 R4 Low Baseline, the NIST Cybersecurity Framework (CSF), and PCI DSS v3.2.1.  Please refer to the spreadsheets at [CIS Controls Mappings](https://workbench.cisecurity.org/community/94/files) for additional information on these mappings (such as more detail on the relationship between the mapped controls) as well as mappings to other frameworks.
+- Mappings – This section displays mappings to other frameworks.  A block will appear for each mapping indicating the framework and identifier within that framework to which this CIS Safeguard is mapped.  Users can click these blocks to pop-up additional information on that mapping.  Please refer to the spreadsheets at [CIS Controls Mappings](https://workbench.cisecurity.org/community/94/files) for additional information on these mappings (such as more detail on the relationship between the mapped controls) as well as mappings to other frameworks.  Currently, CSAT Pro displays the following mappings:
+    - CIS Controls v7.1 to NIST 800-53 Revision 4 Low Baseline, the NIST Cybersecurity Framework (CSF), and PCI DSS v3.2.1
+    - CIS Controls v8.0 to NIST 800-53 Revision 5 Low Baseline and the NIST Cybersecurity Framework (CSF).
 - Custom Tags – This section displays existing tags for the task and allows the user to add new ones. There is an input box where the user can enter new tags; as the user starts typing in this box, it will autopopulate existing tag options that match the characters typed so far.  Once the desired tag has been typed, hitting the enter key will apply that new tag to the task.  Tags are case insensitive (so ABC will be treated the same as abc).  A list of the tags that have already been applied to that task is displayed; a tag can be removed from that task by clicking the ‘x’ at the right of the tag in question.  Custom tags can be used in the Assessment Summary page as a filter to display all tasks that have a particular tag.
 - Asset type
 - Security function – This section displays the security function identified for the CIS Sub-Control.  These are based on the functions used in the NIST Cybersecurity Framework: Identify, Protect, Detect, Respond, and Recover.
@@ -338,7 +345,7 @@ Users with an Organization Admin role for an assessment can delete the assessmen
 
 Scoring
 ------------
-CIS CSAT Pro currently uses a Simple Scoring Method for CIS Controls 7.1 assessments.  This means that each CIS Sub-Control can be assigned a whole number score of 1 through 5.  Reference ranges are provided with each option; for instance, if an organization has a Sub-Control implemented on 50% of their systems, they could select a score of 3 which has a reference range of “41 – 60%”.  These reference ranges are only intended as a convenience and are not intended to be a hard and fast scoring requirement.  If an organization has its own way of scoring on a 1 – 5 scale that differs from the reference ranges, they are free to ignore the reference ranges and select the 1 – 5 scores that fit their scoring methodology.  The provided scoring options with reference ranges are:
+CIS CSAT Pro currently uses a Simple Scoring Method for CIS Controls assessments.  This means that each CIS Sub-Control can be assigned a whole number score of 1 through 5.  Reference ranges are provided with each option; for instance, if an organization has a Sub-Control implemented on 50% of their systems, they could select a score of 3 which has a reference range of “41 – 60%”.  These reference ranges are only intended as a convenience and are not intended to be a hard and fast scoring requirement.  If an organization has its own way of scoring on a 1 – 5 scale that differs from the reference ranges, they are free to ignore the reference ranges and select the 1 – 5 scores that fit their scoring methodology.  The provided scoring options with reference ranges are:
 
 -	1 (0-20%)
 -	2 (21-40%)
@@ -368,26 +375,28 @@ While the industry average information can be useful as a point of comparison fo
 
 By opting in to the Industry Average Service, you and your organization agree to share anonymous assessment scoring data with CIS.
 
+For users that opt in to the industry average service - please note that industry averages for Controls v8 assessments will display “0” for the time being.  Industry averages for Controls v7.1 assessments will continue to function as usual.  The v8 industry averages will be turned on in the near future, at which time there will be separate industry averages based on which version of the CIS Controls (v7.1 or v8.0) is specified for the assessment.
+
 CIS Controls
 ------------
 The CIS Controls are a prioritized set of actions that collectively form a defense-in-depth set of best practices that mitigate the most common attacks against systems and networks. The CIS Controls are developed by a community of IT experts who apply their first-hand experience as cyber defenders to create these globally accepted security best practices. The experts who develop the CIS Controls come from a wide range of sectors including retail, manufacturing, healthcare, education, government, defense, and others.
 
-The CIS Controls consist of 20 top-level Controls that serve as categories to house 171 Sub-Controls.  Each CIS Sub-Control is a specific safeguard that can be implemented or action that can be performed to improve an organization’s cyber defense program.
+The CIS Controls v8.0 consists of 18 top-level Controls that serve as categories to house 153 Safeguards.  Each CIS Safeguard is a specific action that can be implemented or activity that can be performed to improve an organization’s cyber defense program.  The previous version of the CIS Controls, v7.1, consists of 20 top-level Controls that serve as categories to house 171 Safeguards.
 
 To download the CIS Controls and see the other companion resources that are available, please visit the [CIS Controls](https://www.cisecurity.org/controls/).
 
 ### Implementation Groups ###
-In v7.1 of the CIS Controls, Implementation Groups (IGs) were introduced.  Implementation Groups put the 171 Sub-Controls into 3 groups to help organizations prioritize which Sub-Controls to implement first.  CIS recommends that all organizations implement IG1, as the IG1 Sub-Controls represent basic cyber hygiene.  Based on the resources available to the organization, as well the criticality of the data and services that the organization needs to protect, the organization can determine whether they should also implement additional Sub-Controls from IG2 and IG3.  Each Implementation Group builds on the lower Implementation Groups; thus an organization implementing IG2 should also implement IG1, and an organization implementing IG3 should implement all three Implementation Groups.
+In v7.1 of the CIS Controls, Implementation Groups (IGs) were introduced.  Implementation Groups put the CIS Safeguards (known as CIS Sub-Controls prior to CIS Controls v8) into 3 groups to help organizations prioritize which Safeguards to implement first.  CIS recommends that all organizations implement IG1, as the IG1 Safeguards represent basic cyber hygiene.  Based on the resources available to the organization, as well the criticality of the data and services that the organization needs to protect, the organization can determine whether they should also implement additional Safeguards from IG2 and IG3.  Each Implementation Group builds on the lower Implementation Groups; thus an organization implementing IG2 should also implement IG1, and an organization implementing IG3 should implement all three Implementation Groups.
 
 The following are some general guidelines to help organizations determine which Implementation Groups are right for them:
 
 ####IG1####
-Organizations with limited resources where the sensitivity of data is low will need to implement the Sub-Controls that typically fall into the IG1 category.
+Organizations with limited resources where the sensitivity of data is low will need to implement the Safeguards that typically fall into the IG1 category.
 
 ####IG2####
-Organizations with moderate resources and greater risk exposure for handling more sensitive assets and data will need to implement the IG2 controls along with IG1. These Sub-Controls focus on helping security teams manage sensitive client or company information.
+Organizations with moderate resources and greater risk exposure for handling more sensitive assets and data will need to implement the IG2 controls along with IG1. These Safeguards focus on helping security teams manage sensitive client or company information.
 
 ####IG3####
-Mature organizations with significant resources and high risk exposure for handling critical assets and data need to allocate the Sub-Controls under the IG3 category along with IG1 and IG2. The Sub-Controls that help reduce the impact targeted attacks from sophisticated adversaries typically fall into IG3.
+Mature organizations with significant resources and high risk exposure for handling critical assets and data need to allocate the Safeguards under the IG3 category along with IG1 and IG2. The Safeguards that help reduce the impact targeted attacks from sophisticated adversaries typically fall into IG3.
 
-A useful reference that lists all of the Sub-Controls and which Implementation Group they belong to can be found at: [CIS Controls Implementation Groups Reference](https://www.cisecurity.org/white-papers/cis-controls-v7-1-implementation-groups/). 
+A useful reference that lists all of the CIS Safeguards and which Implementation Group they belong to (for CIS Controls v7.1) can be found at: [CIS Controls v7.1 Implementation Groups Reference](https://www.cisecurity.org/white-papers/cis-controls-v7-1-implementation-groups/).
