@@ -281,7 +281,7 @@ The assessment’s Calendar tab displays a calendar of tasks by due date.  All t
 ####Control View####
 The Control View can be reached by clicking on a Control block in the Control Block Heat Map on the Assessment Dashboard.  This view provides the Control title and description.  It has the overall Assessment Average, but it also has Control level summary statistics including the Control Average, the Industry Control Average (if subscribed), the percentage completed for the Control, and the percentage validated for the Control.  Below that, it lists all of the Sub-Controls for that Control.  Each of these can be expanded by clicking on the Sub-Control number/title, which will show the Sub-Control View for that Sub-Control.
 
-####Safeguard / Sub-Control View / Task View####
+####Safeguard View / Sub-Control View / Task View####
 The Safeguard View (also referred to as the Sub-Control or Task View) provides the number and title of the Sub-Control which can be used to collapse or expand that Sub-Control.  To the right of the title is the Implementation Group for that Sub-Control (IG-1, IG-2, or IG-3) and an applicability toggle to indicate whether the Sub-Control is applicable or not for the assessment.
 
 Below the Sub-Control title bar is the Sub-Control number, title, and description.
