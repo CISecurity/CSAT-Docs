@@ -7,12 +7,13 @@
 ##Introduction ##
 CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems, whether GUI based, or server based. The  installer for CIS CSAT Pro  will set up the application, database, and services for you. We use an embedded version of **Tomcat 9** that comes packaged with Grails, and we also supply **Java 11** that is used for the **Neo4j 3.5 database**, as well as CIS CSAT Pro.
 
-**Please note, you will need to download the Neo4j bundle from their download center, located [here](https://neo4j.com/download-center/#community). Please select the most recent version of Neo4j Community Edition 3.5 for the operating system on which you are installing CIS CSAT Pro.**
+**Please note, you will need to download the Neo4j bundle from their download center, located [here](https://neo4j.com/download-center/#community). Please select the most recent version of Neo4j Community Edition 3.5 for the operating system on which you are installing CIS CSAT Pro.<br/>
+Also make sure to not use Neo4j v4 because that version is not compatible.**
 
 ## System Recommendations ##
-While there is no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We do recommend to have adequate size of disk space, as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
+While there are no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We recommend that the server has adequate disk space, as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
 
-Out test environment used an AWS t2.xlarge instance, which has:
+Our test environment used an AWS t2.xlarge instance, which has:
 
  - 16GB RAM
  - 4 quad core vCPUs
@@ -20,7 +21,14 @@ Out test environment used an AWS t2.xlarge instance, which has:
 The operating system CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04.
 
 ### Web Browser###
-The CIS-CAT Pro Dashboard officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
+The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
+
+### Port Information###
+To access to the application from a remote machine, **port 443** (for HTTPS) or **8080** (for HTTP) needs to be included as an **inbound rule** for your firewall.  
+
+In order to opt in to the [Industry Average Service](../csat_pro_user_guide/#industry-average-service), **port 8883** needs to be included as an **outbound rule**. Online license validation also occurs over port 8883, but this is not required if used in a non-Internet connected environment.
+
+In order for the application to access the SMTP server, **port 25 (default), 465 or 587** (depending on your Email Configuration) needs to be included as an **outbound rule**.
 
 <a name=""></a>
 ## Installing CIS CSAT Pro##
@@ -32,6 +40,7 @@ The CIS-CAT Pro Dashboard officially supports **Google Chrome** web browser. Oth
  - Extract the bundle on the machine you are using to host CIS CSAT Pro. 
 <br/>**Note:** For Windows environments, we suggest that you do NOT extract the bundle inside the `c:\Users` directory or its sub-directories because this can lead to permission issues.<br/>Instead, please create a new directory (for example `c:\csatFiles`) to extract the bundle.
  - Execute the CIS CSAT Pro Installer (`CSAT_Pro_unix_Installer.sh or CSAT_Pro_windows-x64_Installer.exe`) as root or user that has root privileges.
+ <br/>Please make sure there are no restrictions in your system that will prevent applications that run inside  `C:\Users\MYUSER~1\AppData` from accessing other directories like `c:/Program Files/CSATPro/neo4j`. If such restrictions are in place, you will need to install CSAT Pro after either temporarily disabling the restriction, or after configuring a bypass for CSAT Pro and related applications like Neo4j (for instance, allowlisting these applications).  For example, certain malware prevention GPO settings can prevent successful installation of CSAT Pro.
 
 ####Welcome####
 First, you will be brought to a welcome screen, stating you are installing CIS CSAT Pro.

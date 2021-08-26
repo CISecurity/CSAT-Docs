@@ -3,7 +3,38 @@
 # Change Log #
 
 ----------
+## CIS CSAT Pro v1.7.0 ##
+**August 26, 2021**
+
+### CIS CSAT Pro Updates ###
+- Added the ability to import CIS Controls v8.0 assessments from exported CSAT Pro or CIS-Hosted CSAT spreadsheets
+- Added the ability to export a CSV file of filtered Safeguards from the Assessment Summary Page
+- Increased the allowable file size for uploaded evidence files from 5MB to 15MB
+- Added in-tool descriptions for the graphs
+- Added greater emphasis on the required Neo4j version from the related Installer wizard page to decrease installation of incompatible Neo4j version
+- Fixed a bug causing the Monthly Assessment Average graph to not display under certain circumstances
+- Fixed a bug in the Implementation Group Average graph calculations
+- Made additional performance improvements and bug fixes
+
+
+### Security Updates ###
+- **Important Security Updates:** Updated numerous outdated third party packages to resolve vulnerabilities present in embedded package dependencies
+- Made additional security improvements
+
+### Document Updates ###
+- New "Port Information" Section in the Deployment Guide
+- Note related to system restrictions that can interfere with the installation
+- Greater emphasis on the required Neo4j version
+
+**Important:**
+In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Sub-Controls in assessments. 
+If you have pre-v1.5.0 assessments that used custom Sub-Control applicability (rather than one of the standard Implementation Groups), 
+or used different Implementation Groups for different assessments, be sure to review the details on the [Troubleshooting page](../troubleshooting). 
+If you do have any applicability adjustments to make, the new bulk applicability toggle on the Assessment Summary page might make the process easier.
+
+
 ## CIS CSAT Pro v1.6.0 ##
+**May 18, 2021**
 
 ### CIS CSAT Pro Updates ###
 - CIS Controls v8.0 support, including:
@@ -27,6 +58,7 @@ If you do have any applicability adjustments to make, the new bulk applicability
 
 
 ## CIS CSAT Pro v1.5.0 ##
+**March 4, 2021**
 
 ### CIS CSAT Pro Updates ###
  - Ability to copy an assessment
@@ -39,6 +71,7 @@ If you have assessments with different IG or custom applicability flags, please 
 More information on this can be found in the [Troubleshooting page](../troubleshooting).
 
 ## CIS CSAT Pro v1.4.0 ##
+**January 28, 2021**
 
 ### CIS CSAT Pro Updates ###
  - Ability to delete assessments
@@ -49,7 +82,8 @@ More information on this can be found in the [Troubleshooting page](../troublesh
  - Organization Logos appear in Organization Chart and Board Level Slides export
 
 ## CIS CSAT Pro v1.3.0 ##
- 
+**December 17, 2020**
+
 ### CIS CSAT Pro Updates ###
  - Ability to import a CSAT Pro CSV file as a new Assessment
  - Ability to edit the Assessment Details for existing assessments
@@ -65,6 +99,7 @@ More information on this can be found in the [Troubleshooting page](../troublesh
  - Additional information on bundle extraction directory to avoid permission issues in Windows environment
 
 ## CIS CSAT Pro v1.2.0 ##
+**October 22, 2020**
  
 ### CIS CSAT Pro Updates ###
  - Ability to visualize the Task Calendar
@@ -76,6 +111,7 @@ More information on this can be found in the [Troubleshooting page](../troublesh
  - Ability to upload your Organization Logo
 
 ## CIS CSAT Pro v1.1.0 ##
+**September 17, 2020**
  
 ### CIS CSAT Pro Updates ###
  - Ability to visualize your Organization Chart 
@@ -93,5 +129,7 @@ More information on this can be found in the [Troubleshooting page](../troublesh
  - Additional Information on the CIS Controls Implementation Groups
  
 ## CIS CSAT Pro v1.0.0 ##
+**August 17, 2020**
+
 Initial Release
  
