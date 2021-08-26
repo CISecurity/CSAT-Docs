@@ -24,11 +24,11 @@
 ### Document Updates ###
 - New "Port Information" Section in the Deployment Guide
 - Note related to system restrictions that can interfere with the installation
-- Greater emphasis on the required Neo4j version
+- Greater emphasis on the required Neo4j versions
 
 **Important:**
-In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Sub-Controls in assessments. 
-If you have pre-v1.5.0 assessments that used custom Sub-Control applicability (rather than one of the standard Implementation Groups), 
+In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Safeguards in assessments. 
+If you have pre-v1.5.0 assessments that used custom Safeguard applicability (rather than one of the standard Implementation Groups), 
 or used different Implementation Groups for different assessments, be sure to review the details on the [Troubleshooting page](../troubleshooting). 
 If you do have any applicability adjustments to make, the new bulk applicability toggle on the Assessment Summary page might make the process easier.
 
@@ -50,8 +50,8 @@ If you do have any applicability adjustments to make, the new bulk applicability
 - Performance and security improvements
 
 **Important:**
-In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Sub-Controls in assessments. 
-If you have pre-v1.5.0 assessments that used custom Sub-Control applicability (rather than one of the standard Implementation Groups), 
+In case you missed it in the v1.5.0 release, a bug was fixed involving the applicability of Safeguards in assessments. 
+If you have pre-v1.5.0 assessments that used custom Safeguard applicability (rather than one of the standard Implementation Groups), 
 or used different Implementation Groups for different assessments, be sure to review the details on the [Troubleshooting page](../troubleshooting). 
 If you do have any applicability adjustments to make, the new bulk applicability toggle on the Assessment Summary page might make the process easier.
 
@@ -66,8 +66,8 @@ If you do have any applicability adjustments to make, the new bulk applicability
  - Fixed a bug with the "Implementation Group" dropdown action so it only applies to the current assessment
 
 **Important:**
-This bug deals with the applicability of Sub-Controls in assessments. If all the assessments in your CSAT Pro instance use the same IG and you don't use any custom applicability flags for individual Sub-Controls, then this bug shouldn’t affect you.
-If you have assessments with different IG or custom applicability flags, please verify that the applicability flag for each Sub-Control/task is set to the intended state. 
+This bug deals with the applicability of Safeguards in assessments. If all the assessments in your CSAT Pro instance use the same IG and you don't use any custom applicability flags for individual Safeguards, then this bug shouldn’t affect you.
+If you have assessments with different IG or custom applicability flags, please verify that the applicability flag for each Safeguard/task is set to the intended state. 
 More information on this can be found in the [Troubleshooting page](../troubleshooting).
 
 ## CIS CSAT Pro v1.4.0 ##
