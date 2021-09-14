@@ -4,7 +4,7 @@
 
 ----------
 ## CIS CSAT Pro v1.7.0 ##
-**August 26, 2021 **
+**August 26, 2021**
 
 ### CIS CSAT Pro Updates ###
 - Added the ability to import CIS Controls v8.0 assessments from exported CSAT Pro or CIS-Hosted CSAT spreadsheets
