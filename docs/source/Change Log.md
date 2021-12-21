@@ -5,6 +5,19 @@
 
 
 ----------
+## CIS CSAT Pro v1.7.2 ##
+**December 21, 2021**
+
+### CIS CSAT Pro Updates ###
+- None
+
+### Security Updates ###
+- **Important Security Update:** The log4j third-party library was updated to the most recent version (v2.17.0) in order to address vulnerabilities found in earlier versions.  See CVE-2021-45105 for additional details.
+
+### Document Updates ###
+- None
+
+
 ## CIS CSAT Pro v1.7.1 ##
 **December 14, 2021**
 
