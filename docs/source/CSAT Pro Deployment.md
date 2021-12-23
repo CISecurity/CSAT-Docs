@@ -5,7 +5,7 @@
 ----------
 <a name="introduction"></a>
 ##Introduction ##
-CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems, whether GUI based, or server based. The  installer for CIS CSAT Pro  will set up the application, database, and services for you. We use an embedded version of **Tomcat 9** that comes packaged with Grails, and we also supply **Java 11** that is used for the **Neo4j 3.5 database**, as well as CIS CSAT Pro.
+CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems; please see the System Recommendations section below for additional details on which operating systems are supported. The  installer for CIS CSAT Pro will set up the application, database, and services for you. We use an embedded version of **Tomcat 9** that comes packaged with Grails, and we also supply **Java 11** that is used for the **Neo4j 3.5 database**, as well as CIS CSAT Pro.
 
 **Please note, you will need to download the Neo4j bundle from their download center, located [here](https://neo4j.com/download-center/#community). Please select the most recent version of Neo4j Community Edition 3.5 for the operating system on which you are installing CIS CSAT Pro.<br/>
 Also make sure to not use Neo4j v4 because that version is not compatible.**
@@ -18,7 +18,7 @@ Our test environment used an AWS t2.xlarge instance, which has:
  - 16GB RAM
  - 4 quad core vCPUs
 
-The operating system CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04.
+The operating system CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04 (Ubuntu Server and Ubuntu Desktop).  Please note that the installer does not function properly in Windows Server 2019 Core Edition, and that Windows Server 2019 Core Edition is not supported.
 
 ### Web Browser###
 The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
