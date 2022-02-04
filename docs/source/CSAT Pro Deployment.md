@@ -36,7 +36,7 @@ In order for the application to access the SMTP server, **port 25 (default), 465
 
 
  - Locate latest version of CIS CSAT Pro in the Downloads section of [CIS WorkBench](https://workbench.cisecurity.org/).
- - Download the appropriate CIS CSAT Pro bundle from [CIS WorkBench](https://workbench.cisecurity.org/).
+ -  - Download the appropriate CIS CSAT Pro bundle for your operating system (installer downloads also available in the [Files section of the CIS WorkBench CSAT Pro community](https://workbench.cisecurity.org/community/118/files)).
  - Extract the bundle on the machine you are using to host CIS CSAT Pro. 
 <br/>**Note:** For Windows environments, we suggest that you do NOT extract the bundle inside the `c:\Users` directory or its sub-directories because this can lead to permission issues.<br/>Instead, please create a new directory (for example `c:\csatFiles`) to extract the bundle.
  - Execute the CIS CSAT Pro Installer (`CSAT_Pro_unix_Installer.sh or CSAT_Pro_windows-x64_Installer.exe`) as root or user that has root privileges.
@@ -60,8 +60,11 @@ The next file to be selected is the **License Key** file. Please enter the path 
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
 Along with the default sender email address, CIS CSAT Pro's mailing configuration must also include connection to a valid SMTP server in order to correctly distribute the "forgot password" messages. Numerous SMTP services exist, such as Gmail, Hotmail, Amazon SES, or in-house SMTP services available through corporate emailing technologies, such as Exchange. CIS CSAT Pro can support these SMTP servers, as long as the connection information entered below is correct. By default, the plugin assumes an unsecured mail server configured at `localhost` on `port 25`. However, this can be modified in the email configuration screen.
 
+####Multi-Factor Authentication (MFA) Configuration####
+The MFA Configuration page allows you to select whether MFA is enabled or disabled for the CSAT Pro instance.  MFA requires email, as it will email a One Time Passcode to the user during the login process.  MFA is an important security feature, and we strongly recommend MFA be enabled for CSAT Pro.
+
 ####Set up TLS Configuration####
-This screen is to set up TLS configuration. This screen has 3 options as to how you want to set up TLS for the CIS CSAT Pro application. 
+This screen is to set up TLS configuration. This screen has 3 options as to how you want to set up TLS for the CIS CSAT Pro application. Encrypting data in transit is important for security, and we strongly recommend that TLS be enabled for CSAT Pro.
 
 Please allow network traffic through the port specific to which option you select. We have listed the default port numbers for each option below.
 
@@ -77,7 +80,7 @@ By default, we select generating a self-signed PKCS12 certificate, to allow for 
 ----------
 
 
-The second option is if you already have a certificate(self-signed or a certificate authority) that you would like CIS CSAT Pro to use. The default port for this option is **443**.
+The second option is if you already have a certificate (self-signed or a certificate authority) that you would like CIS CSAT Pro to use. The default port for this option is **443**.
 
  - **Certificate** - File path to the existing certificate.
  - **Alias** - Alias name for the existing certificate.
@@ -99,6 +102,9 @@ Here, you will need to go through the file selector, and select the bundled Neo4
 ####Set Up Database Admin####
 On this page, we need to set up the password for the Neo4j database admin user. By default, the user name is `neo4j`. The password has some requirements, which are: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
 
+####Set Up CSAT Admin User####
+On this page, we need to set up the default System Administrator for the CSAT Pro application. By default, the user name is `admin`. The password has the following requirements: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
+
 ####Installing and Starting CIS CSAT Pro####
 Here, the installer is starting up the Neo4j service, and is creating and starting the CIS CSAT Pro service. This can take a few minutes.
 
@@ -106,7 +112,9 @@ Here, the installer is starting up the Neo4j service, and is creating and starti
 At this point, the installer has finished setting up and CIS CSAT Pro is starting. It may take a few minutes for the application to be accessible. To get access to the site, please go to `https://<hostname>` if you are using TLS, or `http://<hostname>:8080` if you chose to not use TLS. From here, you can check out the [User Guide](../csat_pro_user_guide) on how to log in and use CIS CSAT Pro.
 
 ##Upgrading CIS CSAT Pro##
-If you are updating CIS CSAT Pro, we have worked on making this process as easy as possible. Download the new version of CIS CSAT Pro from WorkBench, and run the installer executable on the machine that has CIS CSAT Pro installed. The installer will detect an existing installation and ask you to verify the installation directory. At this point, it will stop the CIS CSAT Pro application, deploy the new version of the application, and start the application back up. Just like the initial install, it will take the application a few minutes to fully come back up.
+If you are updating CIS CSAT Pro, we have worked on making this process as easy as possible. Download the new version of CIS CSAT Pro from CIS WorkBench, and run the installer executable on the machine that already has CIS CSAT Pro installed. The installer will detect an existing installation and ask you to verify the installation directory. At this point, it will stop the CIS CSAT Pro application, deploy the new version of the application, and start the application back up. Just like the initial install, it will take the application a few minutes to fully come back up.
+
+When updating an existing installation of CIS CSAT Pro, you have the choice of whether to update the existing configuration, or keep the configuration settings unchanged.  When the installer detects the previous installation and you have the “Yes, update the existing installation” option selected, you can choose whether or not to check the box by “Update the configuration file by populating the installer with the settings from the existing configuration file for the current CSAT Pro installation on this system”.  If you check this box, the values from the existing CSAT Pro configuration file will be populated in the installer, allowing you to see the existing values and make changes if you wish (note: blank values in the config file will be displayed as empty values in the installer).  If you leave this box unchecked, the installer will not prompt you for the configuration file values, and your existing CSAT Pro configuration settings will remain unchanged.  Please note: you can also use the installer in this manner to change configuration settings, even if you aren’t in the process of upgrading to a new version of CIS CSAT Pro.
 
 <a name="obtainingConfigFiles"></a>
 ## Obtaining Configuration Files##
