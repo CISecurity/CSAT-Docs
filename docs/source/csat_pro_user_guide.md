@@ -386,7 +386,7 @@ While the industry average information can be useful as a point of comparison fo
 
 By opting in to the Industry Average Service, you and your organization agree to share anonymous assessment scoring data with CIS.
 
-For users that opt in to the industry average service - please note that industry averages for Controls v8 assessments will display “0” for the time being.  Industry averages for Controls v7.1 assessments will continue to function as usual.  The v8 industry averages will be turned on in the near future, at which time there will be separate industry averages based on which version of the CIS Controls (v7.1 or v8.0) is specified for the assessment.
+There are separate industry averages based on which version of the CIS Controls (v7.1 or v8.0) is specified for the assessment.
 
 CIS Controls
 ------------
