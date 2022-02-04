@@ -5,6 +5,25 @@
 
 
 ----------
+## CIS CSAT Pro v1.8.0 ##
+**February 4, 2022**
+
+### CIS CSAT Pro Updates ###
+- Multi-Factor Authentication (using an emailed one time passcode) can now be enabled
+- Members can now update the configuration settings for an existing CSAT Pro instance by re-running the installer
+- Members can now choose which external control framework mappings are displayed for each user (from the User -> Mapping Preferences menu)
+- The CIS Controls v8 industry averages have now been turned on for CSAT Pro instances that are opted in to industry averages
+
+### Security Updates ###
+- **Important Security Updates:** Updated numerous third-party packages to resolve vulnerabilities present in embedded package dependencies
+- The log4j third-party library was updated to the most recent version (v2.17.1) in order to address a vulnerability found in earlier versions.  See CVE-2021-44832 for additional details.
+- The default CSAT Pro Admin password can now be set with the installer
+- Additional security improvements
+
+### Document Updates ###
+- Updated the System Recommendation information (operating systems and minimum disk space)
+
+
 ## CIS CSAT Pro v1.7.2 ##
 **December 21, 2021**
 
