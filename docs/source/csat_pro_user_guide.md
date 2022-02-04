@@ -18,8 +18,8 @@ Access to CSAT Pro requires a SecureSuite Membership.  Additional information on
 
 See [Obtaining Configuration Files](../CSAT%20Pro%20Deployment/#obtaining-configuration-files) in the [CIS CSAT Pro Deployment Guide](../CSAT%20Pro%20Deployment/) for more details on downloading your license file bundle.
 
-The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation. The path to your license file is also visible in CSAT Pro to System Admins when they navigate to the License Information page. 
-The path is also visible from `CSAT_PRO_INSTALL_DIR/conf/csat-config.yml` in the following section:
+The license file will expire when your SecureSuite Membership expires.  Once your SecureSuite Membership renewal has been processed, your new license file bundle should be available in WorkBench (navigate to your company information and then select “Licenses”).  You should download this updated bundle, extract the contents, and then replace the existing license and configuration files at the location that you selected during installation.
+The path is visible from `CSAT_PRO_INSTALL_DIR/conf/csat-config.yml` in the following section:
 
 		csat:
     		license:
@@ -81,6 +81,8 @@ The login page displays the tool title and version.  Users can enter their usern
 
 The Login page also has a “Forgot Password?” link below the username/password fields.  This will display a pop-up where users can enter their username and click “Send”.  Doing so will send an email to the email address on file for that username.  The email will contain a link that will allow the user to reset the password for that account.
 
+### Two Factor Authentication Page ###
+If Multi-Factor Authentication (MFA) is enabled for the CSAT Pro instance, after successfully entering their username and password, users will be taken from the login page to the Two Factor Authentication page.  Here users will submit the One Time Passcode (OTP) that was sent to the email account associated with the username.  If too much time has passed since the login, or the user enters too many incorrect OTPs, the OTP will become invalid and the user will need to login again to receive a new OTP.
 
 ### Home Page ###
 Upon logging in to CSAT Pro, a user will arrive at the Home page.  This page provides access to organization and assessment information that is specific to the current user.  You can return to the Home page by selecting “Home” from the top menu at any point.  The Home page contains the following sections:
@@ -105,16 +107,16 @@ The Home button returns the user to the Home page.
 The Support Center menu has links to the CSAT Pro Deployment and User Guides, to the CIS Product Support portal (where you can submit a support ticket), to the CIS WorkBench Support Center (which has information and recorded webinars on a variety of CIS topics), and to the main CIS website.
 
 ####System Admin Menu####
-System Admin users will have a gear icon to represent the System Admin menu which can take them to the User Management or System Integrations pages.  For users with a Basic system profile, the gear icon will not be present.
+System Admin users will have a gear icon to represent the System Admin menu which can take them to the User Management, System Integrations, or System Settings pages.  For users with a Basic system profile, the gear icon will not be present.
 
-####User Profile Menu####
-Clicking on the user’s username shows a menu that can take the user to the My Profile page.
+####User Menu####
+Clicking on the user’s username shows a menu that can take the user to the My Profile page or the Mapping Preferences page.
 
 ####Logout####
 Logout will log the user out of CSAT Pro and return the user to the CSAT Pro login page.
 
 ####License Status####
-The License Status symbol shows the status of the tool’s license.  System Admins can click this to go to the License Information page.
+The License Status symbol shows the status of the tool’s license.  This will be a green “LICENSE IS VALID” symbol in the upper right if the license is valid, or it will be a red symbol indicating that the license is invalid.
 
 
 ### Organization Info Page ###
@@ -187,13 +189,13 @@ A detailed log indicating import successes and warnings will be generated and di
 ### System Admin Pages ###
 System Admins have several pages available to them that users with a Basic system profile do not.
 
-####License Information Page####
-This page is available by clicking on the green “LICENSE IS VALID” symbol in the upper right (or the equivalent red symbol indicating that the license is invalid if that’s the case).  This page shows the path to the license file, the verification type (Online or Offline), and the contents of the license file.
-
 ####System Integrations Page####
 This page is available by selecting “System Integrations” from the gear icon on the top menu.  The Industry Average Service is the only system integration that is currently available.  Information on the Industry Average Service can be viewed by clicking on the blue question mark icon.  System Admins can choose to opt in with the “Opt In” button if their instance is currently opted out, or they can choose to opt out with the “Opt Out” button if their instance is currently opted in.
 
 Instances that are currently opted in will have the “Test” and “Refresh Industry Averages” buttons available to them.  The “Test” button will verify the instance’s connection to the Industry Average Service and will result in a message in the upper left indicating the results of that test.  The “Refresh Industry Averages” button will initiate a pull of the latest industry average data from the service, and will send any unsent anonymous assessment information from the current instance.
+
+####System Settings Page####
+This page allows System Admins to turn MFA on or off.  When this setting is enabled, an OTP will be emailed to users as part of the login process, and users must enter the OTP to successfully login. This serves as a second factor for Two Factor Authentication in order to provide greater account security. When this setting is disabled, users only need to provide a username and password to successfully log in. We recommend this setting be enabled for greater security.
 
 ####User Management Page####
 This page is available by selecting “User Management” from the gear icon on the top menu.  The User Management page lets System Admins search the users in the CSAT Pro instance and create new users.  
@@ -226,6 +228,8 @@ If "Include Sub-organizations" is checked, the user's role in each of the select
 ### My Profile Page ###
 The My Profile page is accessible from the Top Menu, by clicking on the user’s username, and then selecting “My Profile”.  This page lets users view their own user information, update that information (First Name, Last Name, Email Address), and change their password.
 
+### Mapping Preferences ###
+The Mapping Preferences page is accessible from the Top Menu, by clicking on the user’s username, and then selecting “Mapping Preferences”.  This page lets the user select which external frameworks the user would like to see in the Mappings section of the Safeguard View.  The page displays which CIS Controls versions that each external framework is mapped to.  Once a user has selected/deselected the checkboxes as desired, press the Save Preferences button to save those selections.  The preferred framework mappings are user specific, so users can each choose their frameworks of interest without impacting other users in the instance.
 
 ### Assessments ###
 Once an assessment is created in an organization, there are several pages that let users with a role in that organization work on that assessment and view the data in it.
@@ -322,7 +326,7 @@ Below the workflow buttons and Evidence section (if present) are the Discussion 
 On the right side of the Sub-Control View you can find additional information on the Sub-Control including:
 
 - Score - the Sub-Control’s current score converted to a 0 – 100 scale
-- Mappings – This section displays mappings to other frameworks.  A block will appear for each mapping indicating the framework and identifier within that framework to which this CIS Safeguard is mapped.  Users can click these blocks to pop-up additional information on that mapping.  Please refer to the spreadsheets at [CIS Controls Mappings](https://workbench.cisecurity.org/community/94/files) for additional information on these mappings (such as more detail on the relationship between the mapped controls) as well as mappings to other frameworks.  Currently, CSAT Pro displays the following mappings:
+- Mappings – This section displays mappings to other frameworks.  A block will appear for each mapping indicating the framework and identifier within that framework to which this CIS Safeguard is mapped.  Users can click these blocks to pop-up additional information on that mapping.  Please refer to the spreadsheets at [CIS Controls Mappings](https://workbench.cisecurity.org/community/94/files) for additional information on these mappings (such as more detail on the relationship between the mapped controls) as well as mappings to other frameworks.  Users will only see those mappings that they have turned on in their Mapping Preferences, which is available in their User Menu.  Currently, CSAT Pro has the following mappings available:
     - CIS Controls v7.1 to NIST 800-53 Revision 4 Low Baseline, the NIST Cybersecurity Framework (CSF), and PCI DSS v3.2.1
     - CIS Controls v8.0 to NIST 800-53 Revision 5 Low Baseline and the NIST Cybersecurity Framework (CSF).
 - Custom Tags – This section displays existing tags for the task and allows the user to add new ones. There is an input box where the user can enter new tags; as the user starts typing in this box, it will autopopulate existing tag options that match the characters typed so far.  Once the desired tag has been typed, hitting the enter key will apply that new tag to the task.  Tags are case insensitive (so ABC will be treated the same as abc).  A list of the tags that have already been applied to that task is displayed; a tag can be removed from that task by clicking the ‘x’ at the right of the tag in question.  Custom tags can be used in the Assessment Summary page as a filter to display all tasks that have a particular tag.

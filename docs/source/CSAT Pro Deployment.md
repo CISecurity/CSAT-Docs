@@ -11,7 +11,7 @@ CIS CSAT Pro is a web application built using the Grails framework. The applicat
 Also make sure to not use Neo4j v4 because that version is not compatible.**
 
 ## System Recommendations ##
-While there are no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We recommend that the server has adequate disk space, as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
+While there are no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We recommend that the server has adequate disk space (a minimum of 11GB), as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
 
 Our test environment used an AWS t2.xlarge instance, which has:
 
