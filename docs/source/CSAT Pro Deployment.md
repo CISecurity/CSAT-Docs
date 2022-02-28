@@ -18,7 +18,7 @@ Our test environment used an AWS t2.xlarge instance, which has:
  - 16GB RAM
  - 4 quad core vCPUs
 
-The operating system CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04 (Ubuntu Server and Ubuntu Desktop).  Please note that the installer does not function properly in Windows Server 2019 Core Edition, and that Windows Server 2019 Core Edition is not supported.
+The operating systems CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04 (Ubuntu Server and Ubuntu Desktop).  Please note that the installer does not function properly in Windows Server 2019 Core Edition, and that Windows Server 2019 Core Edition is not supported.
 
 ### Web Browser###
 The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
