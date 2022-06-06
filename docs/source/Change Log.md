@@ -5,6 +5,48 @@
 
 
 ----------
+## CIS CSAT Pro v1.9.0 ##
+**June 6, 2022**
+
+### CIS CSAT Pro Updates ###
+- Additional fields are now included in the CSV export and import
+    - Fields added to the export: Discussion Comments, Safeguard History Log, Custom Tags, Mappings to external frameworks, Implementation Group, Security Function, Asset Type, Safeguard Average (in percentage format), Safeguard Applicability, Assigned Date, and Due Date
+    - Fields added to the import: Discussion Comments, Safeguard History Log, Custom Tags, Safeguard Applicability, Assigned Date, Due Date, Assigned To user, Assigned By user, Completed By user, and Validated By user
+    - Assessment Import log has been improved
+        - Assessment import log now persists as part of the Assessment Event log
+        - Assessment Import log now includes the new import fields
+        - Assessment Import log noise has been reduced
+- New Organization Management page has been added for System Admins
+    - Org Management page accessible from the System Admin (gear) menu
+    - Search organizations by name, industry, website, or level (top level vs. sub-organization)
+    - See summary information for organizations including the number of open assessments, users, sub-organizations, and parent organization name
+    - Allows System Admins to view and modify organizations in the CSAT Pro instance
+ - New search fields added to the User Management page for System Admins: email, system profile, and enabled/disabled
+ - Filtering in the Assessment Summary page has been updated
+    - Allows multiple selections within the same filter
+    - Implementation Groups can now be selected individually
+- The From email address set in the installer will now apply to OTP and Task emails (in addition to the Forgot Password emails that it already applied to)
+- Improved navigation and user interface
+    - Added links to the next and previous Controls from the Control View
+    - Added a link to the Control View from the Safeguard View
+    - Added links to the next and previous Safeguards from the Assigned Tasks list and from the Pending for Validation Tasks list
+    - Made the Assessment Navigation Menu available at the top of more assessment pages
+    - Added more tabs and information to the Assessment Navigation Menu including:
+        - Assigned Tasks
+        - Pending for Validation Tasks
+        - Control View selector
+        - Assessment Name displayed on more pages
+    - The number of search results are now displayed
+    - Updated informational and warning icons to be more consistent
+
+### Security Updates ###
+- **Important Security Updates:** Updated numerous third-party packages including several to resolve vulnerabilities present in embedded package dependencies
+- Password length requirements (minimum and maximum) can now be customized by System Admins for the CSAT Pro instance from the installer and from the System Settings page
+
+### Document Updates ###
+- Updated the Deployment Guide to address PowerShell configuration requirements for Neo4j in Windows environments
+
+
 ## CIS CSAT Pro v1.8.0 ##
 **February 4, 2022**
 
