@@ -20,6 +20,8 @@ Our test environment used an AWS t2.xlarge instance, which has:
 
 The operating systems CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04 (Ubuntu Server and Ubuntu Desktop).  Please note that the installer does not function properly in Windows Server 2019 Core Edition, and that Windows Server 2019 Core Edition is not supported.
 
+For installation in a Windows environment, PowerShell v2.0 or above must also be installed and added to the “Path” environment variable.  This requirement is due to the fact the CSAT Pro installer utilizes Neo4j's Admin utility during the installation process and this utility requires PowerShell to run in a Windows environment.  See the following link for additional information related to this installation requirement:  [https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell](https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell)
+
 ### Web Browser###
 The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
 
@@ -58,10 +60,13 @@ The next file to be selected is the **License Key** file. Please enter the path 
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
-Along with the default sender email address, CIS CSAT Pro's mailing configuration must also include connection to a valid SMTP server in order to correctly distribute the "forgot password" messages. Numerous SMTP services exist, such as Gmail, Hotmail, Amazon SES, or in-house SMTP services available through corporate emailing technologies, such as Exchange. CIS CSAT Pro can support these SMTP servers, as long as the connection information entered below is correct. By default, the plugin assumes an unsecured mail server configured at `localhost` on `port 25`. However, this can be modified in the email configuration screen.
+Along with the default sender email address, CIS CSAT Pro's mailing configuration must also include connection to a valid SMTP server in order to correctly distribute the "forgot password" messages, One Time Passcode messages for MFA, and Safeguard workflow messages such as task assignment. Numerous SMTP services exist, such as Gmail, Hotmail, Amazon SES, or in-house SMTP services available through corporate emailing technologies, such as Exchange. CIS CSAT Pro can support these SMTP servers, as long as the connection information entered below is correct. By default, the plugin assumes an unsecured mail server configured at `localhost` on `port 25`. However, this can be modified in the email configuration screen.
 
 ####Multi-Factor Authentication (MFA) Configuration####
 The MFA Configuration page allows you to select whether MFA is enabled or disabled for the CSAT Pro instance.  MFA requires email, as it will email a One Time Passcode to the user during the login process.  MFA is an important security feature, and we strongly recommend MFA be enabled for CSAT Pro.
+
+####Password Configuration####
+The Password Configuration page allows you to select password length requirements for all users in the entire CSAT Pro instance, as well as the Neo4j database admin and TLS keystore passwords. The minimum must be at least 8 characters and the maximum can be up to 127 characters. CIS recommends at least a 14 character minimum if MFA is not being used, or at least an 8 character minimum if MFA is being used.
 
 ####Set up TLS Configuration####
 This screen is to set up TLS configuration. This screen has 3 options as to how you want to set up TLS for the CIS CSAT Pro application. Encrypting data in transit is important for security, and we strongly recommend that TLS be enabled for CSAT Pro.
@@ -74,7 +79,7 @@ Please allow network traffic through the port specific to which option you selec
 By default, we select generating a self-signed PKCS12 certificate, to allow for HTTPS protection to the application. Here we ask for 2 fields to be filled out, so we can generate the certificate for you. The default port for this option is **443**.
 
  - <b>Alias</b> - This will be the alias, as well as the key file name.
- - <b>Keystore Password</b> - This will be the password for access to the certificate.
+ - <b>Keystore Password</b> - This will be the password for access to the certificate. Must meet the requirements set on the Password Configuration page.
 
 
 ----------
@@ -84,8 +89,8 @@ The second option is if you already have a certificate (self-signed or a certifi
 
  - **Certificate** - File path to the existing certificate.
  - **Alias** - Alias name for the existing certificate.
- - **Keystore Password** - Keystore password for the existing certificate.
- - **Key Password** - Key password for the existing password.
+ - **Keystore Password** - Keystore password for the existing certificate. Must meet the requirements set on the Password Configuration page.
+ - **Key Password** - Key password for the existing password. Must meet the requirements set on the Password Configuration page.
 
 
 ----------
@@ -100,10 +105,10 @@ In this section, the installer will be extracting all necessary files into the i
 Here, you will need to go through the file selector, and select the bundled Neo4j server file you downloaded, as mentioned in the [**introduction**](#introduction). There is no need to unzip the file from Neo4j, as the installer application will handle all of this for you.
 
 ####Set Up Database Admin####
-On this page, we need to set up the password for the Neo4j database admin user. By default, the user name is `neo4j`. The password has some requirements, which are: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
+On this page, we need to set up the password for the Neo4j database admin user. By default, the user name is `neo4j`. The password has some requirements, which are: 1 letter, 1 number, 1 special character `!@#$%^&`, and must meet the requirements set on the Password Configuration page.
 
 ####Set Up CSAT Admin User####
-On this page, we need to set up the default System Administrator for the CSAT Pro application. By default, the user name is `admin`. The password has the following requirements: 1 letter, 1 number, 1 special character `!@#$%^&`, and must be 8-64 characters long.
+On this page, we need to set up the default System Administrator for the CSAT Pro application. By default, the user name is `admin`. The password has the following requirements: 1 letter, 1 number, 1 special character `!@#$%^&`, and must meet the requirements set on the Password Configuration page.
 
 ####Installing and Starting CIS CSAT Pro####
 Here, the installer is starting up the Neo4j service, and is creating and starting the CIS CSAT Pro service. This can take a few minutes.
