@@ -2,7 +2,28 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.9.1 ##
+**July 28, 2022**
 
+### CIS CSAT Pro Updates ###
+- System Admin users will now see the last login date and created date of a user on the User Management page.
+- System Admins can now perform additional actions from the Manage Organization pages (accessible from Organization Management search results).
+- System Admins can now search partial email addresses on the User Management page.
+- When viewing a Safeguard, users with the Basic User organization role now have a tab allowing them to quickly navigate back to their My Assigned Tasks list.
+- Miscellaneous wording and cosmetic changes.
+
+### Bug Fixes ###
+- Fixed a bug whereby editing an assessment to change the assessment name, start date, or due date would no longer save.
+- Corrected the counts for open assessments, sub-organizations, and users in the Organization Management page.
+
+### Security Updates ###
+- **Important Security Updates:** Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Non System Admins are now restricted to only organizations and users in their organization trees when viewing Organization Info pages, Organization Charts, User Profile pages, and Organization Admin user search results.
+- When editing an assessment name, validation has been added to ensure only allowed characters are used.
+- Additional security improvements.
+
+### Document Updates ###
+- Updated license.txt file to more accurately reflect the current versions of dependencies used including some version numbers that were missed in the v1.9.0 license.txt file.
 
 ----------
 ## CIS CSAT Pro v1.9.0 ##
