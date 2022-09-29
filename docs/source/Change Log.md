@@ -2,6 +2,31 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.10.0 ##
+**September 29, 2022**
+
+### CIS CSAT Pro Updates ###
+- Tables and search results on the following pages can now be sorted (and reverse sorted) by clicking their column headers: Home page, Organization Info pages, Organization Management page, User Management page, Organization Admin Add User pages, Assessment Summary page.
+- Expanded the set of allowable characters for Safeguard Discussion Comments; the pipe character ("|") will still be rejected.
+- Mappings to external frameworks can now be used to filter Safeguards from the Assessment Summary page.
+- Added a warning message to let Organization Admins know if an organization role removal action will remove the user entirely from the organization tree, since a System Admin would be required to add the user back to that tree in the future.
+- When an Organization Admin provides a user with an organization role as part of the Organization Admin Create User action, the addition of the user to that organization is now logged in the Organization History log.
+
+### Bug Fixes ###
+- Fixed an issue where commas in organization names caused problems when trying to export a CSV from assessments in that organization.  Commas, periods, and ampersands in organization names are now replaced with underscores in the filenames of exported CSVs.
+- Fixed an issue causing errors with the Bulk Unassign and Bulk Toggle Applicability actions on the Assessment Summary page.
+- Fixed two issues with importing discussion comments from CSV files; comments were being imported in reverse order and names with more than two words caused issues
+- Fixed an issue where an incorrect error message was sometimes displayed during Forgot Password password resets.
+- Fixed an issue that was preventing the industry averages from updating properly. Note: this fix was released to the industry average service on 9/2/22.
+
+### Security Updates ###
+- Import Security Updates: Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Directory permissions for the installation directory in Linux installations are now more restrictive.
+- Additional security improvements.
+
+### Document Updates ###
+- Updated LICENSE.txt file to reflect the current versions of dependencies used.
+
 ## CIS CSAT Pro v1.9.1 ##
 **July 28, 2022**
 
