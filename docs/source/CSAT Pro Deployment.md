@@ -7,8 +7,8 @@
 ##Introduction ##
 CIS CSAT Pro is a web application built using the Grails framework. The application uses a graph database known as Neo4j. The documentation below describes how to deploy CIS CSAT Pro on **Windows Server 2019 (64 bit)** operating systems, as well as **Ubuntu 18.04** operating systems; please see the System Recommendations section below for additional details on which operating systems are supported. The  installer for CIS CSAT Pro will set up the application, database, and services for you. We use an embedded version of **Tomcat 9** that comes packaged with Grails, and we also supply **Java 11** that is used for the **Neo4j 3.5 database**, as well as CIS CSAT Pro.
 
-**Please note, you will need to download the Neo4j bundle from their download center, located [here](https://neo4j.com/download-center/#community). Please select the most recent version of Neo4j Community Edition 3.5 for the operating system on which you are installing CIS CSAT Pro.<br/>
-Also make sure to not use Neo4j v4 because that version is not compatible.**
+**Please note, you will need to download the latest version of Neo4j Community Edition v3. Please select either the [Windows bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=winzip) or the [Unix bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=unix) depending on the operating system on which you are installing CIS CSAT Pro.
+Be sure that you do not use Neo4j v4 or v5 because they are not currently compatible.**
 
 ## System Recommendations ##
 While there are no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We recommend that the server has adequate disk space (a minimum of 11GB), as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
