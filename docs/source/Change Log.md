@@ -2,6 +2,38 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.11.0 ##
+**December 14, 2022**
+
+### CIS CSAT Pro Updates ###
+- When a change to a setting is successfully made on the System Settings page, this will update the csat-config.yml file so that the updated setting persists through reboots.
+- System Admin users can now see a list of organizations which a user has a role in on the Edit User page, as well as showing what that user’s role is in each organization. System Admins can now modify these roles from this page as well.
+- Added additional checks to prevent problematic cases when System Admins modify/remove user organization roles
+- The Date Closed field can now be edited on the Edit Assessment page.
+- Improved system navigation for System Admin users.
+- The Manage User (Edit User) page available to System Admins now displays the Last Login date and Created Date of a user.
+- Closed assessments on the Organization Info page and the Home page can now be sorted by the Date Closed column.
+- The sub-organizations, assessments, and users tables on the System Admin Manage/Edit Organization page can now be sorted.
+- Updated the CIS Controls v8 to NIST 800-53 Low Baseline mappings.
+
+### Bug Fixes ###
+- Fixed the display of error messages related to password length requirements.
+- When all safeguard checkboxes have been deselected, the bulk edit button on the Assessment Summary page will now be disabled.
+- Fixed a bug that allowed Safeguards to be validated without a score selected in some cases.
+- Corrected some minor formatting issues on the Assessment Summary page.
+- Fixed a typo in the spelling of the word "organization" in the organization history log.
+
+### Security Updates ###
+- **Important Security Updates:** Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Directory permissions for the installation directory in Windows installations are now more restrictive.
+- Users are now required to verify their current password when changing their password from the My Profile page.
+- Outdated TLS versions are now explicitly denied for HTTPS connections, rather than solely relying on browser configurations for this restriction.
+- Additional security improvements.
+
+### Document Updates ###
+- Updated LICENSE.txt file to reflect the current versions of dependencies used.
+
+
 ## CIS CSAT Pro v1.10.0 ##
 **September 29, 2022**
 
@@ -20,7 +52,7 @@
 - Fixed an issue that was preventing the industry averages from updating properly. Note: this fix was released to the industry average service on 9/2/22.
 
 ### Security Updates ###
-- Import Security Updates: Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- **Important Security Updates:** Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
 - Directory permissions for the installation directory in Linux installations are now more restrictive.
 - Additional security improvements.
 
