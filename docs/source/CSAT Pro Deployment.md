@@ -10,6 +10,9 @@ CIS CSAT Pro is a web application built using the Grails framework. The applicat
 **Please note, you will need to download the latest version of Neo4j Community Edition v3. Please select either the [Windows bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=winzip) or the [Unix bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=unix) depending on the operating system on which you are installing CIS CSAT Pro.
 Be sure that you do not use Neo4j v4 or v5 because they are not currently compatible.**
 
+**Please do not install Neo4j prior to installing CSAT Pro. The CSAT Pro installer will prompt you to point to the Neo4j bundle that you downloaded, and the CSAT Pro installer will then complete the installation of Neo4j using that bundle.**
+
+
 ## System Recommendations ##
 While there are no strict requirements associated with CIS CSAT Pro, we do have some recommendations based on what we have tested locally. We recommend that the server has adequate disk space (a minimum of 11GB), as we have configured the installer to install and set up the Neo4j database for the application on the same server as CIS CSAT Pro.
 
@@ -20,7 +23,8 @@ Our test environment used an AWS t2.xlarge instance, which has:
 
 The operating systems CIS used when testing CIS CSAT Pro were Windows Server 2019 and Ubuntu 18.04 (Ubuntu Server and Ubuntu Desktop).  Please note that the installer does not function properly in Windows Server 2019 Core Edition, and that Windows Server 2019 Core Edition is not supported.
 
-For installation in a Windows environment, PowerShell v2.0 or above must also be installed and added to the “Path” environment variable.  This requirement is due to the fact the CSAT Pro installer utilizes Neo4j's Admin utility during the installation process and this utility requires PowerShell to run in a Windows environment.  See the following link for additional information related to this installation requirement:  [https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell](https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell)
+For installation in a Windows environment, PowerShell v2.0 or above must also be installed and added to the “Path” environment variable.  This requirement is due to the fact the CSAT Pro installer utilizes Neo4j's Admin utility during the installation process and this utility requires PowerShell to run in a Windows environment (note: please do not install Neo4j prior to installing CSAT Pro; the CSAT Pro installer will have you point to the downloaded Neo4j bundle during installation). See the following link for additional information related to this installation requirement:  [https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell](https://neo4j.com/docs/operations-manual/3.5/installation/windows/#powershell)
+
 
 ### Web Browser###
 The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browsers may also work but may produce unexpected behavior.
