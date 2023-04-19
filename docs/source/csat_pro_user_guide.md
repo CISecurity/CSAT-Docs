@@ -35,7 +35,8 @@ Please read the [CIS CSAT Pro Privacy Policy](https://workbench.cisecurity.org/f
 
 Getting Started
 ------------
-Information on setting up a CSAT Pro instance can be found in the [CIS CSAT Pro Deployment Guide](../CSAT%20Pro%20Deployment/).  A default System Admin user is created during the installation process.  The default username is “admin” and the default password is “@admin123”.  You can use this default user to log in to CSAT Pro for the first time and to create other users.  It is strongly recommended that you change the password for this default user immediately, as this user has full access to the tool and the password is publicly available.
+Information on setting up a CSAT Pro instance can be found in the [CIS CSAT Pro Deployment Guide](../CSAT%20Pro%20Deployment/).  During installation, a default System Admin with the username “admin” was created.  The password and other information (such as email address and name) for the default admin user was entered by the person who performed the installation of CSAT Pro.  When logging into CSAT Pro for the first time, log in as this default admin user.  Once logged in, additional users can be created.
+
 
 
 The Basics
