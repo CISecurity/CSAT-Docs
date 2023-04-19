@@ -36,7 +36,7 @@
     - User accounts can be automatically locked out after a specified number of failed login attempts (or automatic account lockout can be turned off entirely).
     - User accounts can be automatically unlocked after a specified number of minutes (or automatic account unlock can be turned off entirely).
     - Upon update, the default (CIS recommended) values are set: account lockout after 5 failed login attempts and auto unlock after 15 minutes.
-    - These two values can be customized (or turned off) by System Admins in the System Settings page.
+    - These two values can be customized (or turned off) by System Admins in the System Settings page.  
     - User accounts can now also be manually locked or unlocked using the “Account Locked” toggle on the System Admin Edit User page for a user (accessible from the User Management page).
 - The Feature-Policy HTTP Security Header has now been updated to the newer Permissions-Policy header.
 - Additional security improvements.
