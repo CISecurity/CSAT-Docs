@@ -2,6 +2,49 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.12.0 ##
+**April 19, 2023**
+
+### CIS CSAT Pro Updates ###
+- Added 4 new bulk Safeguard actions to the Assessment Summary page:
+    - Bulk Complete.  This also generates bulk summary email notifications
+    - Bulk Send Back (to undo the Complete status for Safeguards).  This also generates bulk summary email notifications.
+    - Bulk Validate
+    - Bulk Revert Validation
+- Added a Delete User capability that System Admins can access from the User Management page.  (Previously, users could only be disabled, but not deleted.)   In some situations, the user being deleted will need to be replaced (if the user has Safeguard workflow assignments in assessments or is the sole Organization Admin for an organization/sub-organization); if the System Admin performing the deletion has the appropriate organization roles, that System Admin will automatically replace the deleted user.  Otherwise, a suitable replacement user will need to be selected in order to proceed with the Delete User action.
+- The Windows installer will now copy the specified license and DXL configuration files to the “conf” folder in the installation directory during installation/upgrade.  Some users were encountering errors such as “Invalid License Key” under certain configurations; this change should help prevent many of those issues.
+- Updated the System Admin organization role modification and removal actions so that replacement users can be selected in certain cases (when the user being modified is the sole Organization Admin for an organization/sub-organization, or when that user has Safeguard workflow assignments in assessments).  The “Include Sub-organizations” checkbox has now been made available for these actions as well.
+- Added a “Require Password Change on Next Login” toggle that System Admins can access from the Edit User page for a particular user.  When toggled on for specific users, those users will be required to use the Forgot Password workflow to reset their passwords before they can login again.
+- Updated the CIS Controls v8 to NIST CSF mappings.
+- Expanded the characters allowed for the website search field on the System Admin Organization Management page.
+- The Safeguards on the My Assigned Tasks and Pending for Validation Tasks pages are now sortable.
+- References to the older “Sub-Control” term have now been updated to the newer “Safeguard” term throughout the tool (including the Safeguard Score column header in the CSV export).
+- Updated the appearance of the colored score range indicator for Safeguard scores; it now appears as a colored circle next to the numerical score rather than the numeric score itself displaying the color.
+- A “CSAT Pro Knowledge Base Articles” link has been added to the Support Center menu to provide easy access to a listing of CSAT Pro KB articles.
+- The Unix installer has been updated to allow the Neo4j download link to be selectable so that it can be copied/pasted.
+- CSAT Pro has been updated to use a new license verification service.
+
+### Bug Fixes ###
+- Bulk actions can no longer be performed against closed assessments.  To modify a closed assessment with bulk (or singular actions), you need to reopen the assessment first.
+- Fixed a bug that allowed a negative 1 to be displayed for an industry average in rare cases.
+- Fixed a bug in the installers so that some Advanced Mail Setting recommendations are populated for certain webmail providers.
+- Removed duplicated text in Safeguard 5.5 (Controls v8) to correct the Safeguard description.
+
+### Security Updates ###
+- **Important Security Updates:** Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Added account lockout and unlock features:
+    - User accounts can be automatically locked out after a specified number of failed login attempts (or automatic account lockout can be turned off entirely).
+    - User accounts can be automatically unlocked after a specified number of minutes (or automatic account unlock can be turned off entirely).
+    - Upon update, the default (CIS recommended) values are set: account lockout after 5 failed login attempts and auto unlock after 15 minutes.
+    - These two values can be customized (or turned off) by System Admins in the System Settings page.  
+    - User accounts can now also be manually locked or unlocked using the “Account Locked” toggle on the System Admin Edit User page for a user (accessible from the User Management page).
+- The Feature-Policy HTTP Security Header has now been updated to the newer Permissions-Policy header.
+- Additional security improvements.
+
+### Document Updates ###
+- Software Bill of Materials (SBOM) files are now included in the CSAT Pro release bundles (in both JSON and XML formats).
+
+
 ## CIS CSAT Pro v1.11.0 ##
 **December 14, 2022**
 
