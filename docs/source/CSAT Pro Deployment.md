@@ -10,6 +10,14 @@ CIS CSAT Pro is a web application built using the Grails framework. The applicat
 **Please note, you will need to download the latest version of Neo4j Community Edition v3. Please select either the [Windows bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=winzip) or the [Unix bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=unix) depending on the operating system on which you are installing CIS CSAT Pro.
 Be sure that you do not use Neo4j v4 or v5 because they are not currently compatible.**
 
+**The SHA256 hashes to verify the integrity of these bundles are:**
+
+Windows Neo4j Community Edition v3.5.35:
+732EE080D079E4606EE1A6CE3CF863F713690E1A82BFB61B820F53C415122773
+
+Unix Neo4j Community Edition v3.5.35:
+03F7663DD97F8EFF275DCE72E48D5CA39E8C0DC5C83288F222CB4F14E2E1A657
+
 **Please do not install Neo4j prior to installing CSAT Pro. The CSAT Pro installer will prompt you to point to the Neo4j bundle that you downloaded, and the CSAT Pro installer will then complete the installation of Neo4j using that bundle.**
 
 
