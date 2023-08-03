@@ -40,7 +40,7 @@ The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browse
 ### Port Information###
 To access to the application from a remote machine, **port 443** (for HTTPS) or **8080** (for HTTP) needs to be included as an **inbound rule** for your firewall.  
 
-In order to opt in to the [Industry Average Service](../csat_pro_user_guide/#industry-average-service), **port 8883** needs to be included as an **outbound rule**. Online license validation also occurs over port 8883, but this is not required if used in a non-Internet connected environment.
+In order to opt in to the [Industry Average Service](../csat_pro_user_guide/#industry-average-service), **port 8883** needs to be included as an **outbound rule**. Online license validation also occurs over port 443, but this is not required if used in a non-Internet connected environment.
 
 In order for the application to access the SMTP server, **port 25 (default), 465 or 587** (depending on your Email Configuration) needs to be included as an **outbound rule**.
 
@@ -67,8 +67,9 @@ On this screen, you will be selecting the configuration and license files needed
 
 The first file to be selected is the **Integration Configuration File**. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
 
-
 The next file to be selected is the **License Key** file. Please enter the path to the <u>license.xml</u> file, including the file name.
+
+For the Windows installer, the specified license and DXL configuration files will be copied to the “conf” folder in the installation directory during installation/upgrade.
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
