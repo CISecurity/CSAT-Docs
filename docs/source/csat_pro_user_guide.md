@@ -215,7 +215,7 @@ System Admins can use the “Delete User” icon in the Action column to entirel
 
 The “Create User” button allows the System Admin to create a new user. New users created through this System Admin Create User workflow will not have any Organization Roles upon creation.  System Admins can then add the appropriate organizational roles for the user with the “Add Users” functionality.
 
-####User Management Page####
+####Edit User Page####
 This page is available by selecting the “Edit User” icon from the Action column of a user’s row on the User Management page.  On the Edit User page, System Admins can: 
 
 -	Modify information about a user including First Name, Last Name, and Email address
