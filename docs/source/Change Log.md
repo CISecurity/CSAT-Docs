@@ -2,6 +2,47 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.13.0 ##
+**August 9, 2023**
+
+### CIS CSAT Pro Updates ###
+- System Admins can now reorganize organization trees.  Manage Organization pages now have a Change Parent Organization option, enabling System Admins to move an organization/sub-organization to a different location within its current tree, move it into a different existing tree, or move it out of its current tree to be the top-level organization of a new tree.
+- Buttons for certain long running actions are now temporarily disabled after the initial use of that button to prevent accidental multiple submissions and related errors.  This includes the Start New Assessment, Copy Assessment, Import Assessment, Create Organization, Create Sub-Organization, Logout, Login, and OTP Submission actions.
+- Page titles, section headings, and table column names throughout CSAT Pro have been added and updated to provide users with more information about where they are in the tool.
+- System Admin pages are now identified with the gear icon to better differentiate between similar System Admin and Org Admin functions, and remind admins to use caution when performing actions with elevated privileges.
+- Organization Info pages have been updated with counts and formatting changes to provide information such as the number of assessments (total, open, closed), number of users, and the number of sub-organizations (total and immediate).
+- When importing an assessment, some Safeguard titles will now be checked to catch cases where the trailing 0 may have been lost for X.10 Safeguards (for example, to help prevent Safeguard 16.10 from being imported as 16.1 if your spreadsheet has formatted the trailing 0 away).
+- Word wrap has been added for multiple fields to better display long values including first name, last name, username, email address, website, organization name, assessment name, and custom tags.
+- A banner will now be displayed to provide confirmation that a user was successfully deleted. 
+
+### Bug Fixes ###
+- Fixed an issue that led the previous CSAT Pro release (v1.12.0) to not be digitally signed.
+- Additional checks have been added to evidence file uploads and assessment imports to resolve some issues.
+- Fixed a bug that prevented very long discussion comments from being deleted.
+- Fixed a bug that generated an error during assessment creation when a space was provided as the assessment name.
+- Fixed a bug that improperly displayed timestamp information following assessment imports.
+- Fixed a bug that led to jQuery exceptions in certain circumstances.
+- Fixed several issues with license verification.
+
+### Security Updates ###
+- **Important Security Updates:** Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Passwords in the csat-config.yml file are now encrypted.
+- Several additional HTTP Security headers have now been implemented and/or expanded including:
+    - Cross-Origin-Opener-Policy
+    - Cross-Origin-Resource-Policy
+    - Content-Security-Policy
+    - Expanded the use of Content-Disposition
+    - Explicitly disabled the deprecated X-XSS-Protection header
+- Previous password reset links for a user are now invalidated when a new one is generated.
+- Additional validation has been added to better enforce Safeguard workflow actions.
+- Character limits have been added for certain fields including first name, last name, username, email address, website, organization name, assessment name, custom tags, and discussion comments.  A warning is provided if a pasted value exceeds the length and will be truncated.
+
+### Document Updates ###
+- A documentation folder has been added to the release bundle.  The SBOM files, the licence.txt file, and the changelog.txt file can now be found in that folder.
+- The SBOM files now contain the CSAT Pro version number.
+- The SBOM files are now also available as a separate download in CIS WorkBench (in addition to being included in the release bundle).
+
+
 ## CIS CSAT Pro v1.12.0 ##
 **April 19, 2023**
 
