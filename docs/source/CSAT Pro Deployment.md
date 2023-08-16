@@ -10,6 +10,14 @@ CIS CSAT Pro is a web application built using the Grails framework. The applicat
 **Please note, you will need to download the latest version of Neo4j Community Edition v3. Please select either the [Windows bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=winzip) or the [Unix bundle]( https://neo4j.com/download-thanks/?edition=community&release=3.5.35&flavour=unix) depending on the operating system on which you are installing CIS CSAT Pro.
 Be sure that you do not use Neo4j v4 or v5 because they are not currently compatible.**
 
+**The SHA256 hashes to verify the integrity of these bundles are:**
+
+Windows Neo4j Community Edition v3.5.35:
+732EE080D079E4606EE1A6CE3CF863F713690E1A82BFB61B820F53C415122773
+
+Unix Neo4j Community Edition v3.5.35:
+03F7663DD97F8EFF275DCE72E48D5CA39E8C0DC5C83288F222CB4F14E2E1A657
+
 **Please do not install Neo4j prior to installing CSAT Pro. The CSAT Pro installer will prompt you to point to the Neo4j bundle that you downloaded, and the CSAT Pro installer will then complete the installation of Neo4j using that bundle.**
 
 
@@ -32,7 +40,7 @@ The CIS CSAT Pro officially supports **Google Chrome** web browser. Other browse
 ### Port Information###
 To access to the application from a remote machine, **port 443** (for HTTPS) or **8080** (for HTTP) needs to be included as an **inbound rule** for your firewall.  
 
-In order to opt in to the [Industry Average Service](../csat_pro_user_guide/#industry-average-service), **port 8883** needs to be included as an **outbound rule**. Online license validation also occurs over port 8883, but this is not required if used in a non-Internet connected environment.
+In order to opt in to the [Industry Average Service](../csat_pro_user_guide/#industry-average-service), **port 8883** needs to be included as an **outbound rule**. Online license validation occurs over port 443, but this is not required if used in a non-Internet connected environment.
 
 In order for the application to access the SMTP server, **port 25 (default), 465 or 587** (depending on your Email Configuration) needs to be included as an **outbound rule**.
 
@@ -59,12 +67,13 @@ On this screen, you will be selecting the configuration and license files needed
 
 The first file to be selected is the **Integration Configuration File**. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
 
-
 The next file to be selected is the **License Key** file. Please enter the path to the <u>license.xml</u> file, including the file name.
+
+For the Windows installer, the specified license and DXL configuration files will be copied to the “conf” folder in the installation directory during installation/upgrade.
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
-Along with the default sender email address, CIS CSAT Pro's mailing configuration must also include connection to a valid SMTP server in order to correctly distribute the "forgot password" messages, One Time Passcode messages for MFA, and Safeguard workflow messages such as task assignment. Numerous SMTP services exist, such as Gmail, Hotmail, Amazon SES, or in-house SMTP services available through corporate emailing technologies, such as Exchange. CIS CSAT Pro can support these SMTP servers, as long as the connection information entered below is correct. By default, the plugin assumes an unsecured mail server configured at `localhost` on `port 25`. However, this can be modified in the email configuration screen.
+Along with the default sender email address, CIS CSAT Pro's mailing configuration must also include connection to a valid SMTP server in order to correctly distribute the "forgot password" messages, One Time Passcode messages for MFA, and Safeguard workflow messages such as task assignment. Numerous SMTP services exist, such as Gmail, Hotmail, Amazon SES, or in-house SMTP services available through corporate emailing technologies, such as Exchange. CIS CSAT Pro can support these SMTP servers, as long as the connection information entered below is correct. By default, the plugin assumes an unsecured mail server configured at `localhost` on `port 25`. However, this can be modified in the email configuration screen. Some configuration setting recommendations for certain webmail providers may be prepopulated in the Advanced Mail Settings; you should update these settings appropriately to match your actual configuration.
 
 ####Multi-Factor Authentication (MFA) Configuration####
 The MFA Configuration page allows you to select whether MFA is enabled or disabled for the CSAT Pro instance.  MFA requires email, as it will email a One Time Passcode to the user during the login process.  MFA is an important security feature, and we strongly recommend MFA be enabled for CSAT Pro.
