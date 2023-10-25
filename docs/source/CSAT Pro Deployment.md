@@ -62,14 +62,12 @@ First, you will be brought to a welcome screen, stating you are installing CIS C
 ####Select Destination Directory####
 Select the location of where the CIS CSAT Pro application, as well as Neo4j database, and included version of Java will be installed.
 
-####Select Configuration and License Directories####
-On this screen, you will be selecting the configuration and license files needed for the application. You can find out more information on how to get these files in the [Obtaining Configuration Files](#obtainingConfigFiles) section in the deployment guide. We ask that these files are kept in the same directory with each other. If they aren't, the application will not be able to run.
+####Select License Directory####
+On this screen, you will be selecting the license file needed for the application. You can find out more information on how to get this file in the [Obtaining License Key File](#obtainingConfigFiles) section in the deployment guide.
 
-The first file to be selected is the **Integration Configuration File**. Please enter the path to the <u>dxlclient.config</u> file, including the file name.
+Select the **License Key** file by browsing through your file system to the location of your license key or enter the path to the <u>license.xml</u> file, including the file name.
 
-The next file to be selected is the **License Key** file. Please enter the path to the <u>license.xml</u> file, including the file name.
-
-For the Windows installer, the specified license and DXL configuration files will be copied to the “conf” folder in the installation directory during installation/upgrade.
+For the Windows installer, the specified license file will be copied to the “conf” folder in the installation directory during installation/upgrade.
 
 ####Email Configuration####
 CIS CSAT Pro must be able to connect to and utilize a valid SMTP server in order to send email messages. CIS CSAT Pro utilizes the Grails mail plugin for email communication.
@@ -135,14 +133,14 @@ If you are updating CIS CSAT Pro, we have worked on making this process as easy 
 When updating an existing installation of CIS CSAT Pro, you have the choice of whether to update the existing configuration, or keep the configuration settings unchanged.  When the installer detects the previous installation and you have the “Yes, update the existing installation” option selected, you can choose whether or not to check the box by “Update the configuration file by populating the installer with the settings from the existing configuration file for the current CSAT Pro installation on this system”.  If you check this box, the values from the existing CSAT Pro configuration file will be populated in the installer, allowing you to see the existing values and make changes if you wish (note: blank values in the config file will be displayed as empty values in the installer).  If you leave this box unchecked, the installer will not prompt you for the configuration file values, and your existing CSAT Pro configuration settings will remain unchanged.  Please note: you can also use the installer in this manner to change configuration settings, even if you aren’t in the process of upgrading to a new version of CIS CSAT Pro.
 
 <a name="obtainingConfigFiles"></a>
-## Obtaining Configuration Files##
-Your organization’s license file and configuration files can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button as follows: 
+## Obtaining License Key File##
+Your organization’s license file can be obtained through [CIS WorkBench](https://workbench.cisecurity.org/).  After logging into WorkBench, members can click on their company information (reachable from the down arrow near the user’s username in the upper right corner of the page and then clicking on the company’s name in that menu).  On the company information page, click on “Licenses” from the menu below the company name.  This will take the member to a page that shows the company’s Active License Keys.  The member should then download the license bundle by clicking the “Download” button as follows: 
 
 ![](img/WorkBenchLicenseLocation.png)
 
 Note: If this page says “There are no active license keys for this organization”, then the member will need to contact [CIS Support](https://www.cisecurity.org/support/).  
 
-Once downloaded, you should unzip the files.  Two of the files that will be extracted from this bundle are the dxlclient.config file and the license.xml file.  During the installation process, you will browse to these files when prompted by the installer as described above in the Select Configuration and License Directories section.
+Once downloaded, you should unzip the file. The file that will be extracted from this bundle is the license.xml file.  During the installation process, you will browse to this file when prompted by the installer as described above in the Select License Directory section.
 
 <a name="restartingCSATService"></a>
 ## Restarting CIS CSAT Pro application service##
