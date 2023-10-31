@@ -144,7 +144,7 @@ The Organization History section displays event log information for that organiz
 
 ####Assessment History Section####
 The Assessment History graph on the Organization page shows how closed assessment scores for that organization have changed over time based on the date the assessment was closed.
-The chart distinguishes between assessment templates used (separate tracking for CIS Controls v7.1 versus v8) and fluctuates the span of time based on what scores are available for that organization.
+The chart distinguishes between assessment templates used (separate tracking for CIS Controls v7.1 versus v8) and fluctuates the span of time based on what scores are available for that organization.  You can click on a data point on this graph to go to the Assessment Dashboard for the corresponding assessment.
 
 Clicking the information icon beside the graph title (the blue circle with letter 'i' in it) will display in-tool information about the graph.
 
@@ -309,6 +309,7 @@ At the top right of the Assessment Dashboard, users can export reports and close
 - Close Assessment/Reopen Assessment - Only Organization Admins have access to this button.  If the assessment is currently open, the "Close Assessment" button will allow the Organization Admin to lock the assessment, preventing further edits.  If the assessment is currently closed, the "Reopen Assessment" button will allow the Organization Admin to unlock the assessment, allowing edits once again.
 - Export CSV - Both Organization Admins and Full Users have access to this button.  This button allows users to export a Safeguard level spreadsheet in CSV format.  This report contains information similar to what is found in the Assessment Summary tab.  By default, this export will only contain the Safeguards that have been scored so far; the Export Filtered CSV functionality on the Assessment Summary page can be used to customize which Safeguards are exported to CSV.
 - Export Board Level Slides - Both Organization Admins and Full Users have access to this button.  This button allows users to export a set of slides containing high level assessment summary information in pptx format.  This report contains information and graphs from the Assessment Dashboard, as well as the Assessment History graph from the Organization Info page.
+- Export All Evidence - Both Organization Admins and Full Users have access to this button.  This button allows users to export a zip file containing all of the evidence files in this assessment.
 
 ####Assessment Navigation Menu####
 At the top left of many assessment pages, users can select different assessment tabs to switch between the Assessment Dashboard, the Assessment Summary, the Assessment Event Log, the Task Calendar, Assigned Tasks, Pending for Validation Tasks, and the Control Views. Users with a Basic User role in the organization will have a limited Assessment Navigation Menu that only includes navigation back to their My Assigned Tasks list.
