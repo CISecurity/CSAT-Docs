@@ -2,6 +2,40 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.14.0 ##
+**November 1, 2023**
+
+### CIS CSAT Pro Updates ###
+- Organization Admins and Full Users can now download all evidence files in an assessment at one time using the new “Export All Evidence” button on the Assessment Dashboard.
+- Updated the CIS Controls v8 to NIST 800-53 Low mappings.
+- Updated the CIS Controls v8 to NIST CSF mappings.
+- Updated the Assessment History Graph (available to Organization Admins and Full Users on the Organization Info page) so individual assessment data points, when clicked, can navigate you directly to the corresponding Assessment Dashboard. The data point for a reopened assessment no longer appears on the graph while the assessment is open but will appear on the graph once it is closed again.
+- The Closed Date for an assessment will now appear on the Assessment Dashboard for assessments that are closed.
+- When creating a user, the Create button will now be temporarily disabled after the initial click to prevent accidental multiple submissions.
+- The “-Choose One-” option for the Safeguard Score field is no longer available when that Safeguard is in the Completed workflow state.
+- Separate DXL configuration files are no longer required for CSAT Pro; the installer has been updated and no longer requires you to enter the location of these files.
+- Fields on the Create Organization and Create Sub-organization pages have been widened.
+- Several banner messages have been updated.
+- The license indicator will now turn yellow to warn of a license that is nearing expiration.
+- CSAT Pro’s license validation has been updated to accept the new license format (in addition to the existing format).
+
+### Bug Fixes ###
+- Fixed a bug that led to an error after repeated invalid names were entered on the Create Assessment page.
+- Fixed a bug that caused unresolved installer variable errors during the CSAT Pro update process in certain circumstances.
+- Fixed a bug that required a non-HTTPS port to be open for part of the password reset process.
+- The gear icon was removed from the User Preferences page since this is not a Sys Admin function.
+- Fixed a bug in the installer TLS Configuration screen that led to the radio button being difficult to change in some circumstances.
+- Fixed a bug that led to the OTP entry screen being erroneously displayed in certain circumstances.
+
+### Security Updates ###
+- Important Security Updates: Updated third-party packages to resolve vulnerabilities present in embedded package dependencies.
+- Updated the HTTP Security Headers to provide increased cross origin protections.
+
+### Documentation Updates ###
+- The CSAT Pro user documentation has moved to a new location at [https://csat-pro.docs.cisecurity.org/]([https://csat-pro.docs.cisecurity.org/]) and the corresponding link in the CSAT Pro Support Center has been updated.
+- The Obtaining Configuration Files section of the Deployment Guide has been updated to become the Obtaining License Key File section since separate DXL configuration files are no longer required.
+
+
 ## CIS CSAT Pro v1.13.0 ##
 **August 9, 2023**
 
