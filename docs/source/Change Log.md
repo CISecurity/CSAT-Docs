@@ -32,7 +32,7 @@
 - Updated the HTTP Security Headers to provide increased cross origin protections.
 
 ### Documentation Updates ###
-- The CSAT Pro user documentation has moved to a new location at [https://csat-pro.docs.cisecurity.org/]([https://csat-pro.docs.cisecurity.org/]) and the corresponding link in the CSAT Pro Support Center has been updated.
+- The CSAT Pro user documentation has moved to a new location at [https://csat-pro.docs.cisecurity.org/](https://csat-pro.docs.cisecurity.org/) and the corresponding link in the CSAT Pro Support Center has been updated.
 - The Obtaining Configuration Files section of the Deployment Guide has been updated to become the Obtaining License Key File section since separate DXL configuration files are no longer required.
 
 
