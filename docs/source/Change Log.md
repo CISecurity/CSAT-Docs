@@ -2,6 +2,16 @@
 
 # Change Log #
 
+## CIS CSAT Pro v1.14.1 ##
+**November 17, 2023**
+
+**Please note: the CSAT Pro v1.14.0 Windows installer was not affected by these bugs, so users who have already updated to CSAT Pro v1.14.0 do not need to update again to v1.14.1 for Windows.**
+
+### Bug Fixes ###
+ - Fixed a bug in the CSAT Pro v1.14.0 Unix installer that led to an Unresolved Installer Variable error during installation/upgrade.
+ - Fixed a bug in the Unix installer that did not properly copy the selected license file to the conf folder in the installation directory.
+
+
 ## CIS CSAT Pro v1.14.0 ##
 **November 1, 2023**
 
